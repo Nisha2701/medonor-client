@@ -1,0 +1,187 @@
+/*-----------------------------------------------------------------*/
+        /*--------------NAVBAR------------------------*/
+
+/* ------------------------------------- */
+/* ------------------------------------- */
+/* ----Navbar---- */
+/* Page Navigation menu */
+
+.page__Navigation{
+    width:100%;
+    z-index: 100;
+    padding-left:1rem;
+    padding-right:1rem;
+}
+
+.nav--sticky{
+    position:fixed;
+    top:0;
+    background-color: #f7f7f7;
+}
+
+/* Company Branding Navbar */
+#CompanyImage{
+    width:120px;
+    height:90px;
+
+}
+
+.brand__title__name{
+    font-size: 1.4rem;
+    display: inline-block;
+    padding:2rem 1rem;
+    color:#2599e3;
+}
+
+@media screen and (max-width: 700px){
+    #CompanyImage{
+        transform:scale(0.8);
+        margin-top: .6rem;
+        /* width:70px;
+        height:55px; */
+    } 
+    #CompanyTitle{
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 350px){
+    .brand__title__name{
+        padding:2rem 0rem;
+    }
+    .navbar-brand{
+        transform: scale(0.8);
+    }
+
+}
+
+.nav-link{
+    height:58px;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+.nav-link:hover,.navbar-brand:hover{
+    background-color: #d4f3ff;
+    border-bottom: 3px solid #2599e3;
+}
+
+
+.NavLink{
+    margin-left: 5px;
+    margin-right: 8px;
+    font-size: 1.1rem;
+    color: #4b4b4b;
+    opacity: 1;
+}
+@media screen and (max-width: 1100px){
+    .NavLink{
+        font-size:1rem;
+        margin-left: 0px;
+        margin-right: 0px;
+
+    }
+}
+@media screen and (max-width: 992px){
+    .NavLink{
+        display: inline-block;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+
+    }
+}
+#basic-nav-dropdown{
+    color:#4b4b4b;
+    padding-left: .6rem;
+    font-size: 1.1rem;
+}
+.dropdown-item:hover{
+    background-color: #ddd;
+}
+/******************************************/
+/*--    NAVBAR Finishes --*/
+
+/******************************/
+/*--Footer--*/
+
+.main-footer {
+    color: white;
+    background-color: hsl(191,44%,24%);
+    padding-top: 1.2em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+/*----------------*/
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: #fff;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 3.4rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: rgb(255, 123, 0);
+}
+
+
+
+.footer-bottom{
+    background: hsl(191,44%,24%);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
