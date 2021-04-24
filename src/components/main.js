@@ -6,6 +6,7 @@ import Footer from './header_footer/footer';
 import Addblogs from './forms/addblog';
 import AddMedicine from './forms/addmedicine';
 import Home from './home_page/home';
+import about from './about/about';
 
 import "./main.css";
 class Main extends Component {
@@ -22,7 +23,8 @@ class Main extends Component {
                         <Header/>
                         <Switch>
                         <Route path ='/'>
-                        <Route path='/addblog' component={Addblogs} />    
+                        <Route path='/addblog' component={Addblogs} />
+                        <Route path='/about' component={about} />       
                         </Route>
                         </Switch>
                         <Footer/>

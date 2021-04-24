@@ -1,0 +1,63 @@
+.about h1{
+    vertical-align: 'inherit'; 
+    color: #0D9EA4;
+    font-size: 60px;
+    font-family: Philosopher;
+}
+
+.about p {
+    vertical-align: 'inherit';
+    color:  #6D6766;
+     font-size: 1.7rem;
+    padding-top: 8px;
+
+}
+.about h2{
+    vertical-align: inherit; 
+    color: #0D9EA4;
+     font-size: 46px;
+     font-family: Philosopher;
+     padding-top: 10px;
+}
+
+hr {
+    width:70%;
+}
+
+.image1 {
+    padding-top: 5px;
+    width:25%;
+    height:25%;
+}
+
+.vis-mis h2 {
+    font-size: 40px;
+    font-family: Philosopher;
+}
+.vis-mis p {
+    font-size: 18px;
+    font-family: Philosopher;
+}
+
+.picture {
+   
+    width: 96%;
+    
+}
+
+.brmedium {
+    display: block;
+    margin-bottom: 5em;
+}
+
+.one {
+    margin-left: 10px;
+}
+
+.name-text {
+    font-size: 20px;
+}
+
+.role-text {
+    font-size: 18px;
+}
