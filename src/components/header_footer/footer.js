@@ -1,5 +1,5 @@
 import React from "react";
-import "./header_footer.css";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -18,11 +18,11 @@ function Footer() {
               <a href="#">ME-Donor</a>, made with
               love for a better web
             </p>
-                
+
             </div>
         </div>
     </div>
   );
 }
 
-export default Footer;
+export default Footer; 

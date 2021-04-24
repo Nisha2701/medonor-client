@@ -35,7 +35,7 @@ class addMedicine extends Component{
                                     
 
                                     
-                                    <Button className='mt-4'  variant="info"><span className='fa fa-plus mr-3' />Donate Medicine</Button>
+                                    <Button className='mt-4'  variant="danger"><span className='fa fa-plus mr-3' />Donate Medicine</Button>
                             </Form>
                           </Jumbotron>
                         </div>
