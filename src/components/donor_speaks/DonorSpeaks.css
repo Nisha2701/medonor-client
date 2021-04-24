@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /*title*/
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+  .title{
+      font-family: 'Poppins' , sans-serif;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      min-height: 6vh;
+  }
+
+  .title h2{
+      position: relative;
+      font-size: 4vw;
+      color: #0D9EA4;
+      text-shadow:2px 2px #a3d9e4;
+  }
+  /*hr line*/
+  hr.sep-2 {
+    border: 0; 
+    height: 1px; 
+    background-image: linear-gradient(to right, #f0f0f0, #00b9ff, #59d941, #f0f0f0);
+  }
+
+  /* Float three columns side by side */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  .donorName{
+      color: rgb(138, 146, 146);
+      text-transform: capitalize;
+  }
+
+  .image{
+    margin: 0 20px 0 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .title{
+        padding-top: 200px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    border-left: 0 solid #4DC0D7;
+    transition: border-left 300ms ease-in-out, padding-left 300ms ease-in-out;
+  }
+  
+  /*card hover*/
+  .card:hover {
+      padding-left: 1rem;
+      border-left: 0.7rem solid #4DC0D7;
+    }
+    
+   .row{
+       margin: 10px;}
+  
+  
