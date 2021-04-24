@@ -1,24 +1,24 @@
 import React from "react";
-import "./header_footer.css";
+import "./Footer.css";
 
 function Footer() {
   return (
     <div className="main-footer">
         <div className="container">
             <div className="footer-content">
-                <p><b>Redifining the feeling of being  helping hands for someone in Need.</b></p>
+                <h3>MEDONOR</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
                 <ul className="socials">
                     <li><a href="#"><i className="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i className="fa fa-twitter"></i></a></li>
                     <li><a href="#"><i className="fa fa-instagram"></i></a></li>
                     <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
                 </ul>
-                <p className="copyright text-center" style={{fontWeight:'bold'}}>
-              © {new Date().getFullYear()}{" "}
-              <a href="#">ME-Donor</a>, made with
-              love for a better web
-            </p>
-                
+                <div class="footer-bottom">
+                <p>
+                    copyright &copy;MEDONOR | All rights reserved | Terms Of Service | Privacy
+                </p>
+            </div>
             </div>
         </div>
     </div>
