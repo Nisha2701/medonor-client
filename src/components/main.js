@@ -4,6 +4,8 @@ import history from '../history'
 import Header from './header_footer/header';
 import Footer from './header_footer/footer';
 import Addblogs from './forms/addblog';
+import AddMedicine from './forms/addmedicine';
+import Home from './home_page/home';
 
 class Main extends Component {
 
@@ -19,6 +21,7 @@ class Main extends Component {
                     <Switch>
                     <Route path ='/'>
                     <Route path='/addblog' component={Addblogs} />    
+                    <Route path='/addmedicine' component={AddMedicine}/>
                     </Route>
                     </Switch>
                     <Footer/>
