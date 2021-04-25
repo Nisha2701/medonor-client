@@ -7,6 +7,8 @@ import Addblogs from './forms/addblog';
 import AddMedicine from './forms/addmedicine';
 import Home from './home_page/home';
 import about from './about/about';
+import DonorSpeaks from './donor_speaks/DonorSpeaks';
+import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
 
 import "./main.css";
 class Main extends Component {
@@ -24,7 +26,9 @@ class Main extends Component {
                         <Switch>
                         <Route path ='/'>
                         <Route path='/addblog' component={Addblogs} />
-                        <Route path='/about' component={about} />       
+                        <Route path='/about' component={about} />
+                        <Route path='/DonorSpeaks' component={DonorSpeaks} />
+                        <Route path='/ngoBeneficiary' component={ngoBeneficiary} />       
                         </Route>
                         </Switch>
                         <Footer/>

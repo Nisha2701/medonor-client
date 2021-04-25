@@ -67,7 +67,7 @@ class about extends Component {
           <h1>Developers</h1>
           </div>
           <span class="brmedium"></span>
-          
+    <div className="container">      
     <Row>
     <CardGroup>
       <Col md={3}>
@@ -123,6 +123,7 @@ class about extends Component {
  
 </CardGroup>
 </Row>
+</div>
 <span class="brmedium"></span> 
 </div >
 
