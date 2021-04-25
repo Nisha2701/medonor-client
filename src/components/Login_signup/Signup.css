@@ -1,0 +1,19 @@
+.Signup {
+    display: inline-block;
+    margin:auto;
+   
+    min-width:480px;
+    padding: 48px 40px 36px;
+    height: auto;
+    min-height: 500px;
+  }
+
+.usernamebox{
+  margin:15px;
+}
+  
+.butto{
+  align-self:center;
+  margin:15px;
+
+}

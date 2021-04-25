@@ -1,9 +1,10 @@
 import React from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import './Signup.css';
 
 const Signup = (props) => {
   return (
-    <Form>
+    <Form className='Signup'>
       <Row form>
         <Col md={6}>
           <FormGroup>
@@ -18,12 +19,12 @@ const Signup = (props) => {
           </FormGroup>
         </Col>
       </Row>
-      <FormGroup>
+      <FormGroup className='usernamebox'>
         <Label for="exampleUsername">Name</Label>
         <Input type="text" name="Username" id="name" placeholder="Enter Name"/>
       </FormGroup>
       
-      <Button>Sign Up</Button>
+      <Button className='butto'>Sign Up</Button>
     </Form>
   );
 }

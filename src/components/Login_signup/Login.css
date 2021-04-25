@@ -1,9 +1,13 @@
 .Login {
+  display: inline-block;
+  margin:auto;
+ 
   min-width:480px;
-  padding: 60px 0;
+  padding: 48px 40px 36px;
+  height: auto;
+  min-height: 500px;
 }
-  
-.Login form {
-  margin: 0 auto;
-  max-width: 320px;
+
+.butto{
+  margin:6px 2px;
 }
