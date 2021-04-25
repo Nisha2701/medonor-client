@@ -9,6 +9,7 @@ import Home from './home_page/home';
 import about from './about/about';
 import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
+import Login from './Login_signup/Login'
 
 import "./main.css";
 class Main extends Component {
@@ -28,7 +29,8 @@ class Main extends Component {
                         <Route path='/addblog' component={Addblogs} />
                         <Route path='/about' component={about} />
                         <Route path='/DonorSpeaks' component={DonorSpeaks} />
-                        <Route path='/ngoBeneficiary' component={ngoBeneficiary} />       
+                        <Route path='/ngoBeneficiary' component={ngoBeneficiary} />
+                        <Route path='/Login' component={Login} />       
                         </Route>
                         </Switch>
                         <Footer/>
