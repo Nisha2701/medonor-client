@@ -1,11 +1,15 @@
 .Login {
   display: inline-block;
-  margin:auto;
+  margin:4% 5% 6% 50%;
  
   min-width:480px;
   padding: 48px 40px 36px;
   height: auto;
   min-height: 500px;
+
+  border: 1px solid #dadce0;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 2px rgb(0 0 0 / 10%);
 }
 
 .butto{
