@@ -1,0 +1,38 @@
+.about h1{
+    vertical-align: 'inherit'; 
+    color: #0D9EA4;
+    font-size: 70px;
+    font-family: Philosopher;
+    padding-bottom: 10px;
+}
+
+.body-text {
+    font-size: 20px;
+    font-family: Philosopher;
+
+}
+
+.table-heading {
+    font-size: 20px;
+    color: #4F4A48;
+
+}
+
+.table-setting tr {
+    
+  line-height: 100px;
+}
+
+table,th,td
+{
+    border: 5px;
+}
+
+table {
+    table-layout: fixed;
+}
+  
+.last-col {
+    font-style: italic;
+    color: #4E5152;
+}

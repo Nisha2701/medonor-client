@@ -9,6 +9,7 @@ import Medicines from './medicines/medicine';
 import Home from './home_page/home';
 import about from './about/about';
 import { connect } from 'react-redux';
+import ngoList from './ngoList/ngoList';
 
 import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
@@ -52,6 +53,7 @@ class Main extends Component {
                         <Route path='/ngoBeneficiary' component={ngoBeneficiary} />
                         <Route exact path ='/Login' component={Login}   />
                         <Route exact path ='/Signup' component={Signup}   />    
+                        <Route path='/ngoList' component={ngoList} />       
                         </Route>
                         </Switch>
                         <Footer/>
