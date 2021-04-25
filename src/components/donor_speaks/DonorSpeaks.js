@@ -11,7 +11,7 @@ function DonorSpeaks() {
             <hr className="sep-2" />
             <div className="row">
                 <div className="column">
-                    <div className="card">
+                    <div className="card-ds">
                         <p>
       	                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.
                         </p>
@@ -20,7 +20,7 @@ function DonorSpeaks() {
                 </div>
 
                 <div className="column">
-                    <div className="card">
+                    <div className="card-ds">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.
                         </p>
@@ -29,7 +29,7 @@ function DonorSpeaks() {
                 </div>
   
                 <div className="column">
-                    <div className="card">
+                    <div className="card-ds">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.
                         </p>
@@ -40,7 +40,7 @@ function DonorSpeaks() {
 
             <div className="row">
                 <div className="column">
-                    <div className="card">
+                    <div className="card-ds">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.
                         </p>
@@ -49,7 +49,7 @@ function DonorSpeaks() {
                 </div>
 
                 <div className="column">
-                    <div className="card">
+                    <div className="card-ds">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.
                         </p>
@@ -58,7 +58,7 @@ function DonorSpeaks() {
                 </div>
   
                 <div className="column">
-                    <div className="card">
+                    <div className="card-ds">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at.
                         </p>
