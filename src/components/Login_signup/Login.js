@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import './Login.css';
-import Carousel from './Carousel';
 
 
 const Login = (props) => {
