@@ -24,7 +24,7 @@ const Signup = (props) => {
         <Input type="text" name="Username" id="name" placeholder="Enter Name"/>
       </FormGroup>
       
-      <Button className='butto'>Sign Up</Button>
+      <Button className='buto'>Sign Up</Button>
     </Form>
   );
 }
