@@ -1,4 +1,5 @@
-//---------------------------------------NGO BENEFICIARY------------------------------------------------//
+//----------------BLOGS---------------------------------//
+
 
 export const addNgoBeneficiary = (ngobeneficiary) => ({
 	type: ActionTypes.ADD_NGOBENEFICIARY,
@@ -7,6 +8,8 @@ export const addNgoBeneficiary = (ngobeneficiary) => ({
 
 export const postNgoBeneficiary = (ngobeneficiary) => (dispatch) => {
 	const newNgoBeneficiary = ngobeneficiary;
+	newNgoBeneficiary.dateNum = Date.now();
+	const bearer = "Bearer " + localStorage.getItem("token");
 
 	return fetch(baseUrl + "ngobeneficiary", {
 		method: "POST",
@@ -36,13 +39,13 @@ export const postNgoBeneficiary = (ngobeneficiary) => (dispatch) => {
 		.then((response) => response.json())
 		.then((response) => dispatch(addNgoBeneficiary(response)))
 		.catch((error) => {
-			console.log("post ngoblog", error.message);
-			alert("Your ngobeneficiary could not be posted\nError: " + error.message);
+			console.log("post beneficiary", error.message);
+			alert("Your beneficiary could not be posted\nError: " + error.message);
 		});
 };
 
-export const fetchNgoBeneficiary = () => (dispatch) => {
-	dispatch(blogbeneficiaryLoading(true));
+export const fetchNgoBeneficiaries = () => (dispatch) => {
+	dispatch(ngobeneficiariesLoading(true));
 
 	return fetch(baseUrl + "ngobeneficiary")
 		.then(
@@ -63,12 +66,13 @@ export const fetchNgoBeneficiary = () => (dispatch) => {
 			}
 		)
 		.then((response) => response.json())
-		.then((ngoblog) => dispatch(addNgoBeneficiary(ngoblog)))
+		.then((ngobeneficiaries) => dispatch(addNgoBeneficiary(ngobeneficiaries)))
 		.catch((error) => dispatch(ngobeneficiaryFailed(error.message)));
 };
 
 
 export const deleteNgoBeneficiary = (ngobeneficiaryId) => (dispatch) => {
+	const bearer = "Bearer " + localStorage.getItem("token");
 
 	return fetch(baseUrl + "ngobeneficiary/" + ngobeneficiaryId, {
 		method: "DELETE",
@@ -93,24 +97,24 @@ export const deleteNgoBeneficiary = (ngobeneficiaryId) => (dispatch) => {
     .then(response => response.json())
     .then(() => dispatch(removeNgoBeneficiary(ngobeneficiaryId)))
 	.then(() => console.log('NgoBeneficiary deleted!!'))
-    .catch(error => dispatch(ngobeneficiaryFailed(error.message)));
+    .catch(error => dispatch(ngobeneficiariesFailed(error.message)));
 };
 
-export const removeNgoBeneficiary = (ngobeneficiaryId) => ({
+export const removeNgoBeneficairy = (ngobeneficiaryId) => ({
 	type: ActionTypes.DELETE_NGOBENEFICIARY,
 	payload: ngobeneficiaryId,
 });
 
-export const ngobeneficiaryLoading = () => ({
-	type: ActionTypes.NGOBENEFICIARY_LOADING,
+export const ngobeneficairiesLoading = () => ({
+	type: ActionTypes.NGOBENEFICIARIES_LOADING,
 });
 
-export const ngobeneficiaryFailed = (errmess) => ({
-	type: ActionTypes.NGOBENEFICIARY_FAILED,
+export const ngobeneficiariesFailed = (errmess) => ({
+	type: ActionTypes.NGOBENEFICIARIES_FAILED,
 	payload: errmess,
 });
 
-export const addNgoBeneficiary = (ngobeneficiary) => ({
-	type: ActionTypes.ADD_NGOBENEFICIARY,
-	payload: ngobeneficiary,
+export const addNgoBeneficiaries = (blogs) => ({
+	type: ActionTypes.ADD_NGOBENEFICIARIES,
+	payload: ngobeneficiaries,
 });

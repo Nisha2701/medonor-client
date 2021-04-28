@@ -20,7 +20,7 @@ export const NgoBlogs = (
 			return { ...state, isLoading: true, errMess: null, ngoblogs: [] };
 
 		case ActionTypes.ADD_NGOBLOG:
-				var blog = action.payload;
+				var ngoblog = action.payload;
 				return { ...state, ngoblogs: state.ngoblogs.concat(ngoblog)};	
 		
 		case ActionTypes.DELETE_NGOBLOG: 
