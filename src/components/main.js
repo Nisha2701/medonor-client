@@ -7,7 +7,6 @@ import Addblogs from './forms/addblog';
 import AddMedicine from './forms/addmedicine';
 import Medicines from './medicines/medicine';
 import Home from './home_page/home';
-import Blog from '.blog_page_article/blog_page';
 import about from './about/about';
 import { connect } from 'react-redux';
 import ngoList from './ngoList/ngoList';
@@ -47,8 +46,6 @@ class Main extends Component {
                         <Header/>
                         <Switch>
                         <Route path ='/'>
-                        <Route exact path ='/home' component={Home} />
-                        <Route exact path ='/blog_page' component={Blog} />
                         <Route exact path='/addblog' component={Addblogs} />
                         <Route exact path='/about' component={about} />     
                         <Route exact path='/donorspeaks' component={DonorSpeaks} />  
