@@ -1,0 +1,191 @@
+.blogpage{
+    align-items: center;
+    background-color: #fff;
+}
+
+/*-------------------MEDBLOG - Jumbotron-------------------------*/
+
+.blog-title-main{
+    text-align: center;
+    align-items: center;
+    background-color: #DAF1F0;
+}
+
+.blog-title{
+    padding-left: 50px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(17, 179, 179);
+}
+
+.streak-img{
+    height: 40px;
+    width: 60px;
+    margin-bottom: 90px;
+    margin-left: -15px;
+}
+
+.blog-title-byline{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(74, 78, 78);
+}
+
+.blog-title-byline-by{
+    font-size: 1.1rem;
+    color: rgb(74, 78, 78);
+}
+
+
+/*-------------------------------*/
+
+.hero-image{
+    background-color: #fff;
+    margin: 0 100px 0 100px;
+}
+.hero-row{
+    align-items: center;
+}
+
+
+.hero-title{
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(17, 179, 179);
+}
+
+.hero-sub-title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: rgb(74, 78, 78);
+}
+
+
+/*-----------------------*/
+
+.article-card-image{
+    margin: 10px;
+}
+
+
+.blog-sub-title{
+    font-size: 1.5rem;
+    color: rgb(74, 78, 78);
+}
+
+.title-primary{
+    margin-top: -20px;
+}
+
+.blog-list-title{
+    text-align: left;
+    margin-bottom: 2.5rem;
+}
+
+.blog-list-title-info{
+    display: block;
+    text-align: left;
+    margin: auto;
+    width: calc(70% - 10rem);
+}
+
+/*-----------------------BLOG CARDS---------------------*/
+.category-pill{
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+
+
+
+/*----------------------*/
+
+.blog-posts{
+    padding-top: 25px;
+}
+
+.article{
+    padding-bottom: 1.1rem;
+}
+
+.card-text{
+    font-size:0.9rem;
+}
+
+.card-title-desc{
+    color: #797e7e;
+}
+
+
+
+
+/*individual css*/
+.weight{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.txt-center{
+    text-align: center;
+}
+
+/*-------------------small notes-----------------*/
+.note-jumbo{
+    background-color: #DAF1F0;
+}
+.small-note-content{
+    text-align: center;
+}
+
+.small-note-image{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+/*responsive media queries*/
+@media (max-width: 500px){
+    .right-col{
+        display: none;
+    }
+    .left-col{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .streak-img{
+        display: none;
+    }
+    .blog-title{
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .article-card-image, .article-card-image-col{
+        display: none;
+    }
+    .card-texts{
+        margin-left: 30px;
+    }
+    .blog-posts{
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 1200px) {
+    
+}
