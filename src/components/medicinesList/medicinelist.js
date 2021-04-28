@@ -29,7 +29,7 @@ class medlist extends Component {
   
   <Card.Body>
      
-      <Card.Subtitle className="categ-name text-muted">Fever</Card.Subtitle>
+      
     <Card.Title className="medi-name">Paracetamol</Card.Title>
   
     <br></br>
@@ -48,7 +48,7 @@ class medlist extends Component {
          <Card className="cdd-style bkg-im">
   <Card.Body>
     
-    <Card.Subtitle className=" categ-name  text-muted">Infections</Card.Subtitle>
+    
     <Card.Title className="medi-name">Azithromycin</Card.Title>
     <br></br>
     <Card.Text>
@@ -65,7 +65,7 @@ class medlist extends Component {
          <Card className="cdd-style bkg-im">
   <Card.Body>
    
-    <Card.Subtitle className="categ-name text-muted">Headache</Card.Subtitle>
+   
     <Card.Title  className="medi-name">Saridon</Card.Title>
     <br></br>
     <Card.Text>
@@ -88,7 +88,7 @@ class medlist extends Component {
          <Card className="cdd-style bkg-im">
   <Card.Body>
    
-    <Card.Subtitle className="categ-name text-muted">Headache</Card.Subtitle>
+   
     <Card.Title  className="medi-name">Saridon</Card.Title>
     <br></br>
     <Card.Text>
