@@ -2,12 +2,50 @@ import React, { Component } from 'react'
 import "./ngoBeneficiary.css";
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Row, Col } from "react-bootstrap";
+import { connect } from 'react-redux';
+import {fetchNgoBeneficiaries } from '../../redux/actions/ngobeneficiary.js';
 
-class ngoBeneficiary extends Component {
+
+const mapStateToProps = (state) => {
+  return {
+    ngobeneficiaries : state.ngobeneficiaries
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchNgoBeneficiaries: ()=>dispatch(fetchNgoBeneficiaries()),
+  };
+};
+
+class NgoBeneficiaries extends Component {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount() {
+    this.props.fetchNgoBeneficiaries();
+  }
+
+  renderNgoBeneficiaries = (ngobeneficiaries,key) => {
+    return (
+      <Col md={6}>
+            <ListGroup.Item className="list-style">
+                 <p>{ngobeneficiaries.description} </p>
+                 
+                 <i className="b-name" >Name</i>
+                 <p className="b-name">{ngobeneficiaries.author.name}</p>
+                
+                 </ListGroup.Item>
+      </Col>
+    )
+  }
   render() {
+    if (this.props.ngobeneficiaries.isLoading) {
+      return <h1>Loading</h1>;
+    }else if (this.props.ngobeneficiaries.errMess) {
+      return <h1>{this.props.ngobeneficiaries.errMess}</h1>;
+    }
     return (
       <div className="container">
 
@@ -19,66 +57,9 @@ class ngoBeneficiary extends Component {
 
         <ListGroup>
           <Row className="list-setting">
-            <Col md={6}>
-              <ListGroup.Item className="list-style">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at. Cras justo odio </p>
-                 
-                 <i className="b-name" >Name</i>
-                 <p className="b-name">NGO</p>
-                
-                 </ListGroup.Item>
-             
-            </Col>
-            <Col md={6}>
-            <ListGroup.Item className="list-style">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at. Cras justo odio </p>
-                 
-                 <i className="b-name" >Name</i>
-                 <p className="b-name">NGO</p>
-                
-                 </ListGroup.Item>
-            </Col>
-          </Row>
-          <Row className="list-setting">
-            <Col md={6}>
-            <ListGroup.Item className="list-style">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at. Cras justo odio </p>
-                 
-                 <i className="b-name" >Name</i>
-                 <p className="b-name" >NGO</p>
-                
-                 </ListGroup.Item>
-            </Col>
-            <Col md={6}>
-            <ListGroup.Item className="list-style">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at. Cras justo odio </p>
-                 
-                 <i className="b-name" >Name</i>
-                 <p className="b-name">NGO</p>
-                
-                 </ListGroup.Item>
-            </Col>
-          </Row>
-       
-        <Row className="list-setting">
-            <Col md={6}>
-            <ListGroup.Item className="list-style">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at. Cras justo odio </p>
-                 
-                 <i className="b-name" >Name</i>
-                 <p className="b-name">NGO</p>
-                
-                 </ListGroup.Item>
-            </Col>
-            <Col md={6}>
-            <ListGroup.Item className="list-style">
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ab tenetur 		at delectus aspernatur similique modi, est, debitis sit voluptate dolorem 			eligendi odio laborum magni nesciunt? Aliquam omnis molestiae at. Cras justo odio </p>
-                 
-                 <i className="b-name" >Name</i>
-                 <p className="b-name">NGO</p>
-                
-                 </ListGroup.Item>
-            </Col>
+              {this.props.ngobeneficiaries.ngobeneficiaries.map((item, key)=>{
+
+              })}
           </Row>
         </ListGroup>
 
@@ -89,4 +70,4 @@ class ngoBeneficiary extends Component {
     )
   }
 }
-export default ngoBeneficiary;
+export default connect(mapStateToProps,mapDispatchToProps)(NgoBeneficiaries);

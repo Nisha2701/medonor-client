@@ -15,6 +15,7 @@ import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
 import Login from './Login_signup/Login'
 import Signup from './Login_signup/Signup'
+import NgoBlogs from './blog_page_article/blog_page';
 
 import "./main.css";
 
@@ -53,7 +54,8 @@ class Main extends Component {
                         <Route path='/ngoBeneficiary' component={ngoBeneficiary} />
                         <Route exact path ='/Login' component={Login}   />
                         <Route exact path ='/Signup' component={Signup}   />    
-                        <Route path='/ngoList' component={ngoList} />       
+                        <Route path='/ngoList' component={ngoList} />     
+                        <Route path='/ngoblogs' component={NgoBlogs} />  
                         </Route>
                         </Switch>
                         <Footer/>
