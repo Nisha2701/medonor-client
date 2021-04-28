@@ -10,7 +10,7 @@ import Home from './home_page/home';
 import about from './about/about';
 import { connect } from 'react-redux';
 import ngoList from './ngoList/ngoList';
-
+import medicinelist from './medicinesList/medicinelist';
 import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
 import Login from './Login_signup/Login'
@@ -53,7 +53,8 @@ class Main extends Component {
                         <Route path='/ngoBeneficiary' component={ngoBeneficiary} />
                         <Route exact path ='/Login' component={Login}   />
                         <Route exact path ='/Signup' component={Signup}   />    
-                        <Route path='/ngoList' component={ngoList} />       
+                        <Route path='/ngoList' component={ngoList} />   
+                        <Route path='/medicinelist' component={medicinelist} />           
                         </Route>
                         </Switch>
                         <Footer/>
