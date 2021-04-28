@@ -8,6 +8,7 @@
 .blog-title-main{
     text-align: center;
     align-items: center;
+    /*background-color: #DAF1F0;*/
     background-color: #DAF1F0;
 }
 
@@ -37,97 +38,73 @@
 }
 
 
+/* -----------hr line------------------ */
+.hr-line{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid rgb(19, 101, 105); 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ .hr-line-content { 
+     background:#fff; 
+     padding:5px 15px; 
+     font-size: 1.3rem;
+     letter-spacing: 3px;
+     color: #4cd8d1;
+ }
+
 /*-------------------------------*/
-
-.hero-image{
-    background-color: #fff;
-    margin: 0 100px 0 100px;
-}
-.hero-row{
-    align-items: center;
-}
-
-
-.hero-title{
-    font-size: 4rem;
-    font-weight: 700;
-    color: rgb(17, 179, 179);
-}
-
-.hero-sub-title{
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: rgb(74, 78, 78);
-}
-
-
-/*-----------------------*/
-
 .article-card-image{
     margin: 10px;
+    height: 80px;
+    width: 80px;
 }
 
-
-.blog-sub-title{
-    font-size: 1.5rem;
-    color: rgb(74, 78, 78);
+/*-----------------------right col-----------------------*/
+.right-col-card{
+    margin-top: 20px;
+    border: 2px solid rgba(15, 143, 150, 0.2);
+    border-radius: 20px;
 }
 
-.title-primary{
-    margin-top: -20px;
+.card-title-right{
+    font-size: 1.1rem;
+    text-align: center;
 }
 
-.blog-list-title{
-    text-align: left;
-    margin-bottom: 2.5rem;
-}
-
-.blog-list-title-info{
-    display: block;
-    text-align: left;
-    margin: auto;
-    width: calc(70% - 10rem);
+.hr-right{
+    background-color: rgba(15, 143, 150, 0.2);
 }
 
 /*-----------------------BLOG CARDS---------------------*/
-.category-pill{
-    margin-bottom: 10px;
-    font-size: 0.8rem;
+.article-card{
+    border-radius: 20px;    
 }
 
+.article-card:hover{
+    box-shadow: 6px 6px 2px 1px rgba(15, 143, 150, 0.2);
+    cursor: pointer;
+}
 
-
-
-/*----------------------*/
+.weight{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
 
 .blog-posts{
     padding-top: 25px;
 }
 
-.article{
-    padding-bottom: 1.1rem;
-}
-
-.card-text{
-    font-size:0.9rem;
-}
-
 .card-title-desc{
     color: #797e7e;
+    font-size: 1.2rem;
 }
 
 
 
 
-/*individual css*/
-.weight{
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.txt-center{
-    text-align: center;
-}
 
 /*-------------------small notes-----------------*/
 .note-jumbo{
@@ -142,6 +119,14 @@
     width: 50px;
 }
 
+.note-card{
+    border-radius: 20px;
+}
+
+.note-card:hover{
+    box-shadow: 6px 6px 2px 1px rgba(15, 143, 150, 0.2);
+    cursor: pointer;
+}
 
 
 
@@ -167,10 +152,9 @@
 
 @media (max-width: 600px) {
     .streak-img{
-        display: none;
-    }
-    .blog-title{
-        padding-left: 0;
+        /*display: none;*/
+        height: 30px;
+        width: 40px;
     }
 }
 
@@ -180,9 +164,6 @@
     }
     .card-texts{
         margin-left: 30px;
-    }
-    .blog-posts{
-        margin-left: 80px;
     }
 }
 

@@ -124,7 +124,7 @@ class about extends Component {
 </CardGroup>
 </Row>
 </div>
-<span class="brmedium"></span> 
+<span className="brmedium"></span> 
 </div >
 
 

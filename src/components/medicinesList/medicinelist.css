@@ -1,0 +1,48 @@
+.head h1{
+    vertical-align: 'inherit'; 
+    color: #0D9EA4;
+    font-size: 70px;
+    font-family: Philosopher;
+    padding-bottom: 10px;
+}
+
+.containerr {
+    margin-left: 80px;
+    margin-right: 60px;
+}
+
+.bkg-im{
+ 
+    background-image: url("../../images/greyb32.jpg");
+}
+
+.cdd-style { 
+    width: 28.5rem; 
+    margin-right: 2px;
+   
+    box-shadow: 0 10px 20px #DADFE5, 0 4px 8px #DADFE5;
+ 
+     
+   
+ }
+
+ .categ-name {
+     font-size: 15px;
+ }
+
+ 
+ .medi-name {
+    font-size: 20px;
+    font-weight:547;
+}
+
+.cdd-text {
+    font-weight:550;
+}
+
+ .btt-style{
+      margin-left: 60px;
+      margin-right: 40px;
+      font-size: 15px;
+      font-family: 'Lucida Sans';
+ }

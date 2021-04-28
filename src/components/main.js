@@ -7,10 +7,11 @@ import Addblogs from './forms/addblog';
 import AddMedicine from './forms/addmedicine';
 import Medicines from './medicines/medicine';
 import Home from './home_page/home';
+import Blog from './blog_page_article/blog_page';
 import about from './about/about';
 import { connect } from 'react-redux';
 import ngoList from './ngoList/ngoList';
-
+import medicinelist from './medicinesList/medicinelist';
 import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
 import Login from './Login_signup/Login'
@@ -47,6 +48,8 @@ class Main extends Component {
                         <Header/>
                         <Switch>
                         <Route path ='/'>
+                        <Route exact path ='/home' component={Home} />
+                        <Route exact path ='/blog_page' component={Blog} />
                         <Route exact path='/addblog' component={Addblogs} />
                         <Route exact path='/about' component={about} />     
                         <Route exact path='/donorspeaks' component={DonorSpeaks} />  
@@ -56,6 +59,7 @@ class Main extends Component {
                         <Route exact path ='/Signup' component={Signup}   />    
                         <Route path='/ngoList' component={ngoList} />     
                         <Route path='/ngoblogs' component={NgoBlogs} />  
+                        <Route path='/medicinelist' component={medicinelist} />           
                         </Route>
                         </Switch>
                         <Footer/>

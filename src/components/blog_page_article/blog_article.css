@@ -10,14 +10,10 @@
     font-size: 3rem;
     color: #0e514e;
 }
-
-.article-image{
-    text-align: center;
-}
 .blog-article-text-image{
     margin-bottom: 20px;
-    height: 400px;
-    width: 600px;
+    height: 300px;
+    width: 500px;
 }
 
 .span-publisher{
