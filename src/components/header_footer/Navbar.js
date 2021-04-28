@@ -15,10 +15,10 @@ function Header() {
           <span>MEDONOR</span>
         </div>
         <div className='links' id={showLinks ? 'hidden' : ''}>
-          <a href='#home'>Home</a>
-          <a href='#about'>About Us</a>
-          <a href='#help'>Ways to Help</a>
-          <a href='#blog'>Blog</a>
+        <Link to='/'>Home</Link>
+        <Link to='/about'>About Us</Link>
+        <Link to='/help'>Ways to Help</Link>
+        <Link to='/blog'>Blog</Link>
         </div>
       </div>
       <div className='nav-right'>
