@@ -15,3 +15,36 @@
 .butto{
   margin:6px 2px;
 }
+
+.LoginDiv{
+  box-shadow: 0 0 2px #495867;
+  padding: 5%;
+  width: 100%;
+  background-color: #F7F7FF;
+  opacity: 0.90;
+  color: #265279;
+  margin-top: 5%; 
+}
+
+.Otheroption{
+  box-shadow: 0 0 2px #495867;
+  padding: 5%;
+  width: 100%;
+  margin-top: 5%;
+  background-color: #F7F7FF;
+  color: #265279;
+  opacity: 0.90;
+}
+
+.LoginCorousel{
+  height: 400px;
+  background-size:cover;
+  overflow:hidden;
+  box-shadow: 0 0 25px white;
+  border-radius: 50px;
+}
+
+.LoginCorouselDiv{
+  width: 90%;
+  margin: 5% 10% 5% 10%;
+}

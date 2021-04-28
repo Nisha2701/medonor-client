@@ -3,12 +3,18 @@ import { DonorSpeaks} from './reducers/donorspeaks';
 import UserReducer from './reducers/userReducer';
 import thunk from "redux-thunk";
 import logger from "redux-logger";
+import { NgoBlogs } from './reducers/ngoblogs';
+import { Medicines } from './reducers/medicines';
+import { NgoBeneficiaries } from './reducers/ngobeneficiary';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const ConfigureStore = () =>{
     const store = createStore(
         combineReducers({
            donorspeaks: DonorSpeaks,
+           medicines: Medicines,
+           ngobeneficiaries: NgoBeneficiaries,
+           ngoblogs:NgoBlogs,
            user: UserReducer
         }),
         composeEnhancers(applyMiddleware(thunk, logger))
