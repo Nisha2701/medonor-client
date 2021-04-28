@@ -1,0 +1,26 @@
+.article-heading{
+    background-color: #DAF1F0;
+}
+
+.article-heading-content{
+    align-items: center;
+}
+
+.article-heading-title{
+    font-size: 3rem;
+    color: #0e514e;
+}
+
+.article-image{
+    text-align: center;
+}
+.blog-article-text-image{
+    margin-bottom: 20px;
+    height: 400px;
+    width: 600px;
+}
+
+.span-publisher{
+    font-weight: 700;
+    color: rgb(6, 42, 41);
+}
