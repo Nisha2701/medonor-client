@@ -7,25 +7,26 @@ import img3 from './img3.jpg';
 import img4 from './img4.PNG';
 import logo from './logo.png';
 import {Jumbotron , Container , Row , Col , Button} from 'react-bootstrap'
-function Home() {
+function home() {
     
     return (
-        <div className="homepage">
-            <Jumbotron fluid  className="jumbo">
-                <Container>
-                    <img className="logo" src={logo} alt="" />
-                    <h1>Reimagining access for those in need</h1>
-                    <p>
+        <div className="homepage-home">
+            <Jumbotron fluid  className="jumbo-home" style={{backgroundColor: '#fff'}}>
+                <Container className="jumbo-container">
+                    <img className="logo-home" src={logo} alt=""/>
+                    <h1 style={{color:"#0D9EA4"}}>Reimagining access <br/>for those in need</h1>
+                    <p className="sub-sub-para">
                         MEDONOR drives the future of healthcare by 
                         connecting people with surplus medications.
                     </p>
                 </Container>
             </Jumbotron>
 
+
             <Container className="content">
                 <Row>
                     <Col>
-                        <h3>
+                        <h3 className="content-h3-home">
                             Why Medicine?
                         </h3>
                         <p className="extra">
@@ -45,18 +46,18 @@ function Home() {
                         </p>
                     </Col>
                     <Col>
-                        <img src={img1} alt="" />
+                        <img src={img1} alt="" className="home-image-2" />
                     </Col>
                 </Row>
 
-                <hr/>
+                <hr style={{borderBottom: "0.35px solid #c2cccc" , width:"90%"}}/>
 
                 <Row>
                     <Col>
-                        <img src={img2} alt="" />
+                        <img src={img2} alt="" className="home-image-3"/>
                     </Col>
                     <Col>
-                        <h3>
+                        <h3 className="content-h3-home">
                             MEDONOR saves medicine to save lives
                         </h3>
                         <p className="para">
@@ -68,11 +69,11 @@ function Home() {
                     </Col>
                 </Row>
 
-                <hr/>
+                <hr style={{borderBottom: "0.35px solid #c2cccc" , width:"90%" , opacity:"35%"}}/>
 
                 <Row>
                     <Col>
-                        <h3>Who can donate?</h3>
+                        <h3 className="content-h3-home">Who can donate?</h3>
                         <p className="para">
                             MEDONOR directly accepts medicine from manufacturers, 
                             pharmacies, wholesalers, and health facilities. If you’re 
@@ -83,23 +84,22 @@ function Home() {
                         </p>
                     </Col>
                     <Col>
-                        <img src={img3} alt="" />
+                        <img src={img3} alt="" className="home-image-4"/>
                     </Col>
                 </Row>
 
-                <hr/>
+                <hr style={{borderBottom: "0.35px solid #c2cccc" , width:"90%" , opacity:"90%"}}/>
 
                 <Row>
                     <Col>
-                        <img src={img4} alt="" />
+                        <img src={img4} alt="" className="home-image-5"/>
                     </Col>
                     <Col>
-                    <h3>How does it work?</h3>
+                    <h3 className="content-h3-home">How does it work?</h3>
                         <p className="para">
                             We take surplus medications off of your hands and get them to the 
                             people who need them.
                         </p>
-                        <Button variant="outline-info">Learn more</Button>{' '}
                     </Col>
                 </Row>
 
@@ -109,4 +109,4 @@ function Home() {
         </div>
         );
     }
-    export default Home;
+    export default home;

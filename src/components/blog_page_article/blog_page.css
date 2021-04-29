@@ -3,7 +3,7 @@
     background-color: #fff;
 }
 
-/*-------------------MEDBLOG - Jumbotron-------------------------*/
+/*---------------------------------------*/
 
 .blog-title-main{
     text-align: center;
@@ -14,7 +14,6 @@
 
 .blog-title{
     padding-left: 50px;
-    font-size: 4rem;
     font-weight: 700;
     color: rgb(17, 179, 179);
 }
@@ -37,6 +36,11 @@
     color: rgb(74, 78, 78);
 }
 
+/*-------------------------------------------*/
+
+.blog-posts{
+    padding-top: 25px;
+}
 
 /* -----------hr line------------------ */
 .hr-line{
@@ -50,19 +54,44 @@
  .hr-line-content { 
      background:#fff; 
      padding:5px 15px; 
-     font-size: 1.3rem;
+     font-size: 1.8rem;
      letter-spacing: 3px;
      color: #4cd8d1;
  }
 
-/*-------------------------------*/
+ /*---------------------------------------*/
+
+ .article-card{
+    border-radius: 20px;    
+}
+
+.article-card:hover{
+    box-shadow: 6px 6px 2px 1px rgba(15, 143, 150, 0.2);
+    cursor: pointer;
+}
+
 .article-card-image{
     margin: 10px;
     height: 80px;
     width: 80px;
 }
 
-/*-----------------------right col-----------------------*/
+.weight{
+    font-weight: 500;
+    font-size: 1.78rem;
+}
+
+.card-title-desc{
+    color: #797e7e;
+    font-size: 1.6rem;
+}
+
+.read-more-btn{
+    font-size: 1.3rem;
+}
+
+/*----------------------------------------------*/
+
 .right-col-card{
     margin-top: 20px;
     border: 2px solid rgba(15, 143, 150, 0.2);
@@ -78,45 +107,10 @@
     background-color: rgba(15, 143, 150, 0.2);
 }
 
-/*-----------------------BLOG CARDS---------------------*/
-.article-card{
-    border-radius: 20px;    
-}
+/*------------------------------------------*/
 
-.article-card:hover{
-    box-shadow: 6px 6px 2px 1px rgba(15, 143, 150, 0.2);
-    cursor: pointer;
-}
-
-.weight{
-    font-weight: 500;
-    font-size: 1.2rem;
-}
-
-.blog-posts{
-    padding-top: 25px;
-}
-
-.card-title-desc{
-    color: #797e7e;
-    font-size: 1.2rem;
-}
-
-
-
-
-
-/*-------------------small notes-----------------*/
 .note-jumbo{
     background-color: #DAF1F0;
-}
-.small-note-content{
-    text-align: center;
-}
-
-.small-note-image{
-    height: 50px;
-    width: 50px;
 }
 
 .note-card{
@@ -128,18 +122,20 @@
     cursor: pointer;
 }
 
+.small-note-content{
+    text-align: center;
+}
+
+.small-note-image{
+    height: 50px;
+    width: 50px;
+}
 
 
 
 
 
-/*----------------------------------------------------------------------------------------*/
-
-
-
-
-
-
+/*------------------------------------------*/
 /*responsive media queries*/
 @media (max-width: 500px){
     .right-col{

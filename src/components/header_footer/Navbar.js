@@ -1,39 +1,41 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./Navbar.css";
-import {Navbar , Nav , Button} from 'react-bootstrap'
+import {Navbar , Nav , Button , Row , Col} from 'react-bootstrap'
 import logo from './logo3.png'
 function Header() {
     
     return (
         <div>
-            <Navbar expand="lg" variant="light" className="main-navbar">
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" variant="outline-primary" className="toggle-navbar-icon" />
-                <Navbar.Brand href="/home" className="brand-span">
-                    <img alt="" src={logo} className="d-inline-block align-top logo-image" />{' '}
-                    <Navbar.Brand href="#home" className="navbar-brand-name">
+            <Navbar expand="lg" variant="light" className="main-navbar-hf">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" variant="outline-primary" className="toggle-navbar-icon-hf" />
+                <Navbar.Brand href="/home" className="brand-span-hf">
+                    <img alt="" src={logo} className="d-inline-block align-top logo-image-hf" />{' '}
+                    <Navbar.Brand href="#home" className="navbar-brand-name-hf">
                         <span>
                             MEDONOR
                         </span>
                     </Navbar.Brand>
                 </Navbar.Brand>
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto"></Nav>
-                    <Nav className="justify-content-center">
-                        <Nav.Link href="/home" className="navbar-main-links">
-                            <span className="navbar-nav-links">Home</span>
+                <Navbar.Collapse id="responsive-navbar-nav" className="nav-links-section-hf">
+                    <Nav className="justify-content-center"></Nav>
+                    <Nav className="mr-auto">
+                        <Nav.Link href="/home" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                            <span className="navbar-nav-links-hf">Home</span>
                         </Nav.Link>
-                        <Nav.Link eventKey={2} href="/about" className="navbar-main-links">
-                            <span className="navbar-nav-links">About us</span>
+                        <Nav.Link eventKey={2} href="/about" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                            <span className="navbar-nav-links-hf">About us</span>
                         </Nav.Link>
-                        <Nav.Link eventKey={3} href="/waystohelp" className="navbar-main-links">
-                            <span className="navbar-nav-links">Ways to Help</span>
+                        <Nav.Link eventKey={3} href="/wth" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                            <span className="navbar-nav-links-hf">Ways to Help</span>
                         </Nav.Link>
-                        <Nav.Link eventKey={4} href="/blog" className="navbar-main-links">
-                            <span className="navbar-nav-links">Blog</span>
+                        <Nav.Link eventKey={4} href="/blog" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                            <span className="navbar-nav-links-hf">Blog</span>
                         </Nav.Link>
-                        <Button variant="outline-info" className="sign-in-btn" inline>Sign in</Button>{' '}
+                        <Button variant="outline-info" className="sign-in-btn-hf" inline style={{border: "1px solid #fff" , borderRadius:"20px"}}>Sign in</Button>{' '}
                     </Nav>
+                    
+                    
                 </Navbar.Collapse>
             </Navbar>
         </div>

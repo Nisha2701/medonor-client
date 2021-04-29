@@ -6,7 +6,7 @@ import Footer from './header_footer/footer';
 import Addblogs from './forms/addblog';
 import AddMedicine from './forms/addmedicine';
 import Medicines from './medicines/medicine';
-import Home from './home_page/home';
+import home from './home_page/home';
 //import Blog from './blog_page_article/blog_page';
 import about from './about/about';
 import { connect } from 'react-redux';
@@ -17,7 +17,7 @@ import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
 import Login from './Login_signup/Login';
 import Signup from './Login_signup/Signup';
 import Error from './Login_signup/Error';
-import Blog from './blog_page_article/blog_page';
+import blog from './blog_page_article/blog_page';
 import BlogArticle from './blog_page_article/blog_article';
 import WTH from './waystohelp/wth'
 
@@ -42,7 +42,7 @@ class Main extends Component {
     render() {
         const Home = () =>{
             return(
-                <Home />
+                <home />
             )
         }
         return(
@@ -52,7 +52,7 @@ class Main extends Component {
                         <Header/>
                         <Switch>
                         <Route path ='/'>
-                        <Route exact path ='/home' component={Home} />
+                        <Route exact path ='/home' component={home} />
                         
                         <Route exact path='/addblog' component={Addblogs} />
                         <Route exact path='/about' component={about} />     
@@ -64,8 +64,8 @@ class Main extends Component {
                         <Route exact path = '/Error' component={Error} />    
                         <Route path='/ngoList' component={ngoList} />   
                         <Route path='/medicinelist' component={medicinelist} /> 
-                        <Route path='/blog_page' component={Blog} />      
-                        <Route path='/blog_article' component={BlogArticle} />
+                        <Route path='/blog' component={blog} />      
+                        <Route path='/BlogArticle' component={BlogArticle} />
                         <Route exact path='/wth' component={WTH} />    
                         </Route>
                         </Switch>
