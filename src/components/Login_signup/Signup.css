@@ -1,17 +1,107 @@
-.Signup {
+.Signup{
     display: inline-block;
-    margin:auto;
+    margin:8% 12% 10% 18%;
+    width:65%;
    
     min-width:480px;
     padding: 48px 40px 36px;
-    height: auto;
     min-height: 500px;
+
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px rgb(0 0 0 / 10%);
   }
+
+.SignupForm{
+  width:50%;
+  float:right;
+}
+
+.form-row{
+  padding:15px;
+}
 
 .usernamebox{
   margin:15px;
 }
   
-.butto{
+.buto{
   align-self:center;
+  margin: 6px 15px;
+}
+
+.logo{
+  margin: 25px 55px 8px 1px;
+  width:50%;
+  max-height: 100px;
+  float:left;
+}
+
+@media screen and (max-width: 1080px){
+  .Signup{
+    margin:5% 2% 8% 4%;
+    min-width:900px;
+  }
+
+  .logo{
+    margin-top: 45px;
+  }
+  .SignupForm{
+    min-width:350px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+
+  .Signup{
+    min-width:700px;
+    margin:5% 2% 8% 4%;
+    padding: 24px 14px 6px;
+
+  }
+
+  .logo{
+    margin-top: 145px;
+    min-width: 100px;;
+  }
+  .SignupForm{
+    min-width:350px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+
+  .Signup{
+    min-width:480px;
+    margin:1% 2% 8% 0.25%;
+    padding: 0px;
+
+  }
+
+  .logo{
+    margin: 150px 0px 0px;
+    min-width: 100px;;
+    padding: 0px;
+  }
+  .SignupForm{
+    min-width:250px;
+  }
+}
+
+
+@media only screen and (max-width: 375px){
+
+  .Signup{
+    min-width:350px;
+    margin:1% 0% 8% 2%;
+    padding: 0px;
+
+  }
+
+  .logo{
+    display: none;
+  }
+  .SignupForm{
+    min-width:250px;
+  }
 }
