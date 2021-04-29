@@ -19,7 +19,7 @@ import Signup from './Login_signup/Signup';
 import Error from './Login_signup/Error';
 import Blog from './blog_page_article/blog_page';
 import BlogArticle from './blog_page_article/blog_article';
-
+import WTH from './waystohelp/wth'
 
 
 import "./main.css";
@@ -65,7 +65,8 @@ class Main extends Component {
                         <Route path='/ngoList' component={ngoList} />   
                         <Route path='/medicinelist' component={medicinelist} /> 
                         <Route path='/blog_page' component={Blog} />      
-                        <Route path='/blog_article' component={BlogArticle} />          
+                        <Route path='/blog_article' component={BlogArticle} />
+                        <Route exact path='/wth' component={WTH} />    
                         </Route>
                         </Switch>
                         <Footer/>
