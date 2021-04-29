@@ -26,57 +26,59 @@ const Signup = (props) => {
   }
 
   return (
-    <Form className='Signup'>
-      <Row>
-        <Col className="logo">
-        <img src={display5}></img>
-        </Col>
-        <Col className="SignupForm">
-          <Row form>
-            <Col md={6}>
-              <FormGroup>
-                <Label for="exampleEmail">Email/Username</Label>
-                <Input type="text" name="name" id="exampleEmail" placeholder="Enter name" 
-                onChange={changeHandler} value={signupCred.name}/>
-              </FormGroup>
-            </Col>
-            <Col md={6}>
-              <FormGroup>
-                <Label for="examplePassword">Password</Label>
-                <Input type="password" name="password" id="examplePassword" placeholder="Enter Password" 
-                onChange={changeHandler} value={signupCred.password}/>
-              </FormGroup>
-            </Col>
-          </Row>
-          <FormGroup className='usernamebox'>
-            <Label for="exampleUsername">Name</Label>
-            <Input type="text" name="username" id="name" placeholder="Enter Your UserName"
-            onChange={changeHandler} value={signupCred.username}/>
-          </FormGroup>
+    <div className="SignupContainer">
+      <Form className='Signup'>
+        <Row>
+          <Col className="logo">
+          <img src={display5}></img>
+          </Col>
+          <Col className="SignupForm">
+            <Row form>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="exampleEmail">Email/Username</Label>
+                  <Input type="text" name="name" id="exampleEmail" placeholder="Enter name" 
+                  onChange={changeHandler} value={signupCred.name}/>
+                </FormGroup>
+              </Col>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="examplePassword">Password</Label>
+                  <Input type="password" name="password" id="examplePassword" placeholder="Enter Password" 
+                  onChange={changeHandler} value={signupCred.password}/>
+                </FormGroup>
+              </Col>
+            </Row>
+            <FormGroup className='usernamebox'>
+              <Label for="exampleUsername">Name</Label>
+              <Input type="text" name="username" id="name" placeholder="Enter Your UserName"
+              onChange={changeHandler} value={signupCred.username}/>
+            </FormGroup>
 
-          <FormGroup className='usernamebox'>
-          <Label for="exampleRole">Role</Label>
-          <Input type="select" name="role" id="exampleRole"
-          onChange={changeHandler} value={signupCred.role}>
-              <option>donor</option>
-              <option>ngo</option>
-              <option>admin</option>
-            </Input>
-          </FormGroup>
+            <FormGroup className='usernamebox'>
+            <Label for="exampleRole">Role</Label>
+            <Input type="select" name="role" id="exampleRole"
+            onChange={changeHandler} value={signupCred.role}>
+                <option>donor</option>
+                <option>ngo</option>
+                <option>admin</option>
+              </Input>
+            </FormGroup>
 
-          <FormGroup className='usernamebox'>
-            <Label for="description">Description</Label>
-            <Input type="textarea" name="description" id="description" value={signupCred.description} 
-            onChange={changeHandler}/>
-          </FormGroup>
+            <FormGroup className='usernamebox'>
+              <Label for="description">Description</Label>
+              <Input type="textarea" name="description" id="description" value={signupCred.description} 
+              onChange={changeHandler}/>
+            </FormGroup>
 
-          <Button className='buto' onClick={()=>{
-            console.log(signupCred)
-            props.signupInit(signupCred)
-          }}>Sign Up</Button>
-        </Col>
-      </Row>
-    </Form>
+            <Button className='buto' onClick={()=>{
+              console.log(signupCred)
+              props.signupInit(signupCred)
+            }}>Sign Up</Button>
+          </Col>
+        </Row>
+      </Form>
+    </div>
       
   );
 }

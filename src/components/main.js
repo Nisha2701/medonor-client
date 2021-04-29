@@ -16,6 +16,7 @@ import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
 import Login from './Login_signup/Login';
 import Signup from './Login_signup/Signup';
+import Error from './Login_signup/Error';
 import Blog from './blog_page_article/blog_page';
 import BlogArticle from './blog_page_article/blog_article';
 
@@ -59,7 +60,8 @@ class Main extends Component {
                         <Route exact path='/medicines'  component={() => <Medicines medicines={this.props.medicines} />}  />
                         <Route path='/ngoBeneficiary' component={ngoBeneficiary} />
                         <Route exact path ='/Login' component={Login}   />
-                        <Route exact path ='/Signup' component={Signup}   />    
+                        <Route exact path ='/Signup' component={Signup}   />
+                        <Route exact path = '/Error' component={Error} />    
                         <Route path='/ngoList' component={ngoList} />   
                         <Route path='/medicinelist' component={medicinelist} /> 
                         <Route path='/blog_page' component={Blog} />      

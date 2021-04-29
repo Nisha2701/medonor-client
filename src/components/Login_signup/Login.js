@@ -23,7 +23,7 @@ const Login = (props) => {
   };
 
   return (
-    <div>
+    <div className="LoginContainer">
     <Row>
     <Col lg="6"><LoginCorousel/></Col>
     <Col lg="6">

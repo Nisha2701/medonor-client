@@ -1,3 +1,6 @@
+
+
+
 .Login {
   display: inline-block;
   margin:4% 5% 6% 50%;
@@ -24,6 +27,9 @@
   opacity: 0.90;
   color: #265279;
   margin-top: 5%; 
+  border-radius: 10px;
+  
+  background-image: url('../../images/Caraousel/Caraousel-Image-last.jpg');
 }
 
 .Otheroption{
@@ -34,6 +40,9 @@
   background-color: #F7F7FF;
   color: #265279;
   opacity: 0.90;
+  border-radius: 10px;
+  
+  background-image: url('../../images/Caraousel/Caraousel-Image-last.jpg');
 }
 
 .LoginCorousel{

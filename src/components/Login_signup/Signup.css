@@ -1,3 +1,9 @@
+.SignupContainer{
+  background-image: url('../../images/Caraousel/Medicine-2.jpg');
+  background-size: cover;
+}
+
+
 .Signup{
     display: inline-block;
     margin:8% 12% 10% 18%;
@@ -10,6 +16,8 @@
     border: 1px solid #dadce0;
     border-radius: 5px;
     box-shadow: 0 0 20px 2px rgb(0 0 0 / 10%);
+    background-color: white;
+    filter: drop-shadow(2px 4px 6px grey);
   }
 
 .SignupForm{
