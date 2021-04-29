@@ -15,14 +15,14 @@ function BlogArticle() {
                 <Container className="article-heading-content">
                     <h3 className="article-heading-title">Reconditioning the benefits system for a stronger COVID-19 recovery</h3>
                     <p> <span className="span-published-by">Published by</span>  <span className="span-publisher">Rachel Green</span> | <span>23 Apr 2021</span></p>
-                    <Badge variant="info" className="category-pill">
-                        COVID-19
-                    </Badge>{' '}
                 </Container>
             </Jumbotron>
             <Container fluid="sm" className="blog-article-text">
                     <p>
-                        <div className="article-image"><img src={img1} className="blog-article-text-image" /></div>
+                        
+                            <img src={img1} className="blog-article-text-image" />
+                        
+
                         <br/><br/>
                         It is undeniable that the benefits system has been a lifeline to many during the COVID-19 pandemic, enabling millions of individuals and families to continue living with some semblance of normality. The demand for Universal Credit in particular has been exceptionally high, with 6 million people in receipt of this benefit in January 2021 – double the number prior to the pandemic. A smoother system
                         For a system with pre-existing issues, the rapid increase in Universal Credit applications could have been hugely problematic. But efforts made by the Department for Work and Pensions (DWP) during the pandemic appear to have protected, if not enhanced, the system. Moving to a ‘don’t call us, we’ll call you’ tactic seems to have improved the experience of Universal Credit applicants.

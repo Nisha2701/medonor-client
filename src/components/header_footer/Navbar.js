@@ -1,31 +1,42 @@
-import React from 'react';
-import './Navbar.css';
-import { useState } from 'react';
-import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
-
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "./Navbar.css";
+import {Navbar , Nav , Button} from 'react-bootstrap'
+import logo from './logo3.png'
 function Header() {
-  const [showLinks, setShowLinks] = useState(false);
-  return (
-    <div className='Navbar'>
-      <div className='nav-left'>
-        <button onClick={() => setShowLinks(!showLinks)}>
-          <MenuRoundedIcon fontSize='large' />
-        </button>
-        <div className='brand'>
-          <span>MEDONOR</span>
+    
+    return (
+        <div>
+            <Navbar expand="lg" variant="light" className="main-navbar">
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" variant="outline-primary" className="toggle-navbar-icon" />
+                <Navbar.Brand href="/home" className="brand-span">
+                    <img alt="" src={logo} className="d-inline-block align-top logo-image" />{' '}
+                    <Navbar.Brand href="#home" className="navbar-brand-name">
+                        <span>
+                            MEDONOR
+                        </span>
+                    </Navbar.Brand>
+                </Navbar.Brand>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto"></Nav>
+                    <Nav className="justify-content-center">
+                        <Nav.Link href="/home" className="navbar-main-links">
+                            <span className="navbar-nav-links">Home</span>
+                        </Nav.Link>
+                        <Nav.Link eventKey={2} href="/about" className="navbar-main-links">
+                            <span className="navbar-nav-links">About us</span>
+                        </Nav.Link>
+                        <Nav.Link eventKey={3} href="/waystohelp" className="navbar-main-links">
+                            <span className="navbar-nav-links">Ways to Help</span>
+                        </Nav.Link>
+                        <Nav.Link eventKey={4} href="/blog" className="navbar-main-links">
+                            <span className="navbar-nav-links">Blog</span>
+                        </Nav.Link>
+                        <Button variant="outline-info" className="sign-in-btn" inline>Sign in</Button>{' '}
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
         </div>
-        <div className='links' id={showLinks ? 'hidden' : ''}>
-          <a href='#home'>Home</a>
-          <a href='#about'>About Us</a>
-          <a href='#help'>Ways to Help</a>
-          <a href='#blog'>Blog</a>
-        </div>
-      </div>
-      <div className='nav-right'>
-        <button>Sign In</button>
-      </div>
-    </div>
-  );
+    );
 }
-
 export default Header;
