@@ -41,7 +41,7 @@ export const postNgoBlog = (ngoblog) => (dispatch) => {
 		});
 };
 
-export const fetchNgoBlog = () => (dispatch) => {
+export const fetchNgoBlogs = () => (dispatch) => {
 	dispatch(ngoblogLoading(true));
 
 	return fetch(baseUrl + "ngoblog")
