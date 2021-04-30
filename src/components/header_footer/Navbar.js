@@ -20,16 +20,16 @@ function Header() {
                 <Navbar.Collapse id="responsive-navbar-nav" className="nav-links-section-hf">
                     <Nav className="justify-content-center"></Nav>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/home" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                        <Nav.Link href="/home" className="navbar-main-links-hf">
                             <span className="navbar-nav-links-hf">Home</span>
                         </Nav.Link>
-                        <Nav.Link eventKey={2} href="/about" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                        <Nav.Link eventKey={2} href="/about" className="navbar-main-links-hf" >
                             <span className="navbar-nav-links-hf">About us</span>
                         </Nav.Link>
-                        <Nav.Link eventKey={3} href="/wth" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                        <Nav.Link eventKey={3} href="/wth" className="navbar-main-links-hf" >
                             <span className="navbar-nav-links-hf">Ways to Help</span>
                         </Nav.Link>
-                        <Nav.Link eventKey={4} href="/blog" className="navbar-main-links-hf"    style={{marginLeft:"20px" , marginRight:"20px"}}>
+                        <Nav.Link eventKey={4} href="/blog" className="navbar-main-links-hf" >
                             <span className="navbar-nav-links-hf">Blog</span>
                         </Nav.Link>
                         <Button variant="outline-info" className="sign-in-btn-hf" inline style={{border: "1px solid #fff" , borderRadius:"20px"}}>Sign in</Button>{' '}

@@ -81,7 +81,15 @@ function home() {
                             through one of our partners. You can also contribute to our 
                             cause with a monetary donation. Every little bit helps, and 
                             we appreciate your support.
+                            <br/><br/>
+                            Know more about the generous donors and NGOs who have been works for this greater cause
                         </p>
+                        <Button variant="info" size="lg" style={{margin:"20px"}}>
+                            Donor Speaks
+                        </Button>{' '}
+                        <Button variant="info" size="lg" style={{margin:"20px"}}>
+                            Beneficiary talks
+                        </Button>{' '}
                     </Col>
                     <Col>
                         <img src={img3} alt="" className="home-image-4"/>
@@ -97,7 +105,7 @@ function home() {
                     <Col>
                     <h3 className="content-h3-home">How does it work?</h3>
                         <p className="para">
-                            We take surplus medications off of your hands and get them to the 
+                            Our goal is to locate surplus medication and get them to the 
                             people who need them.
                         </p>
                     </Col>
