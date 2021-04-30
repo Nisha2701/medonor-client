@@ -176,4 +176,4 @@ const WTH = () => {
   )
 }
 
-export default WTH
+export default WTH;

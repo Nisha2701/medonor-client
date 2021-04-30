@@ -1,6 +1,7 @@
 .main-navbar-hf{
     background-color: #085053;
     padding-bottom: -10px;
+    
 }
 
 
@@ -16,17 +17,26 @@
 
 .navbar-nav-links-hf{
     color: #fff;
+   
+}
+
+.hm {
+    margin-left :655px;
 }
 
 /*---------------------------------------*/
 .navbar-main-links-hf {
     margin-bottom: 0px;
+    
+   
 }
 
 .navbar-nav-links-hf {
     display: inline-block;
     color: #fff;
     text-decoration: none;
+    font-size:20px;
+    
 }
 
 .navbar-nav-links-hf::after {
@@ -64,4 +74,5 @@
     margin-right: 20px;
     border-color: #fff;
     color: #fff;
+    font-size:20px;
 }
