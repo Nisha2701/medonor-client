@@ -1,4 +1,6 @@
 //----------------BLOGS---------------------------------//
+import * as ActionTypes from "../ActionTypes";
+import { baseUrl } from "../../shared/baseUrl";
 
 
 export const addNgoBeneficiary = (ngobeneficiary) => ({
@@ -67,45 +69,45 @@ export const fetchNgoBeneficiaries = () => (dispatch) => {
 		)
 		.then((response) => response.json())
 		.then((ngobeneficiaries) => dispatch(addNgoBeneficiary(ngobeneficiaries)))
-		.catch((error) => dispatch(ngobeneficiaryFailed(error.message)));
+		.catch((error) => dispatch(ngobeneficiariesFailed(error.message)));
 };
 
 
-export const deleteNgoBeneficiary = (ngobeneficiaryId) => (dispatch) => {
-	const bearer = "Bearer " + localStorage.getItem("token");
+// export const deleteNgoBeneficiary = (ngobeneficiaryId) => (dispatch) => {
+// 	const bearer = "Bearer " + localStorage.getItem("token");
 
-	return fetch(baseUrl + "ngobeneficiary/" + ngobeneficiaryId, {
-		method: "DELETE",
-		headers: {
-			"Content-Type": "application/json",
-			Authorization: bearer,
-		},
-        //credentials: "same-origin"
-    })
-    .then(response => {
-        if (response.ok) {
-          return response;
-        } else {
-          var error = new Error('Error ' + response.status + ': ' + response.statusText);
-          error.response = response;
-          throw error;
-        }
-      },
-      error => {
-            throw error;
-      })
-    .then(response => response.json())
-    .then(() => dispatch(removeNgoBeneficiary(ngobeneficiaryId)))
-	.then(() => console.log('NgoBeneficiary deleted!!'))
-    .catch(error => dispatch(ngobeneficiariesFailed(error.message)));
-};
+// 	return fetch(baseUrl + "ngobeneficiary/" + ngobeneficiaryId, {
+// 		method: "DELETE",
+// 		headers: {
+// 			"Content-Type": "application/json",
+// 			Authorization: bearer,
+// 		},
+//         //credentials: "same-origin"
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//           return response;
+//         } else {
+//           var error = new Error('Error ' + response.status + ': ' + response.statusText);
+//           error.response = response;
+//           throw error;
+//         }
+//       },
+//       error => {
+//             throw error;
+//       })
+//     .then(response => response.json())
+//     .then(() => dispatch(removeNgoBeneficiary(ngobeneficiaryId)))
+// 	.then(() => console.log('NgoBeneficiary deleted!!'))
+//     .catch(error => dispatch(ngobeneficiariesFailed(error.message)));
+// };
 
-export const removeNgoBeneficairy = (ngobeneficiaryId) => ({
-	type: ActionTypes.DELETE_NGOBENEFICIARY,
-	payload: ngobeneficiaryId,
-});
+// export const removeNgoBeneficairy = (ngobeneficiaryId) => ({
+// 	type: ActionTypes.DELETE_NGOBENEFICIARY,
+// 	payload: ngobeneficiaryId,
+// });
 
-export const ngobeneficairiesLoading = () => ({
+export const ngobeneficiariesLoading = () => ({
 	type: ActionTypes.NGOBENEFICIARIES_LOADING,
 });
 
@@ -114,7 +116,7 @@ export const ngobeneficiariesFailed = (errmess) => ({
 	payload: errmess,
 });
 
-export const addNgoBeneficiaries = (blogs) => ({
+export const addNgoBeneficiaries = (ngobeneficiaries) => ({
 	type: ActionTypes.ADD_NGOBENEFICIARIES,
 	payload: ngobeneficiaries,
 });

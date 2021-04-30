@@ -54,34 +54,28 @@ hr {
     margin-left: 10px;
 }
 
-.name-text {
-    font-size: 20px;
-}
-
-.role-text {
-    font-size: 18px;
-}
 
 .faqq {
     background-color: #E0EEFF;
   }
-  .ccontainer body {
+
+.ccontainer body {
       background-color: #FFF8F2;
       color: #373539;
       font-family: Philosopher;
     }
     
-    .ccontainer {
+.ccontainer {
      padding-left: 160px;
      padding-right: 200px;
      padding-top: 20px;
     }
     
-    .faq-drawer {
+.faq-drawer {
       margin-bottom: 30px;
     }
     
-    .faq-drawer__content-wrapper {
+.faq-drawer__content-wrapper {
      
       font-size: 1.45em;
       line-height: 1.6em;
@@ -91,7 +85,7 @@ hr {
       font-family: Philosopher;
     }
     
-    .faq-drawer__title {
+.faq-drawer__title {
       border-top: #CCD0D5 1px solid;
       cursor: pointer;
       display: block;
@@ -104,7 +98,7 @@ hr {
       font-family: Philosopher;
     }
     
-    .faq-drawer__title::after {
+.faq-drawer__title::after {
       border-style: solid;
       border-width: 1px 1px 0 0;
       content: " ";
@@ -122,28 +116,83 @@ hr {
     }
     
     /* OPTIONAL HOVER STATE */
-    .faq-drawer__title:hover { 
+.faq-drawer__title:hover { 
       color: #4E4B52  ;
     }
     
-    .faq-drawer__trigger:checked
+.faq-drawer__trigger:checked
       + .faq-drawer__title
       + .faq-drawer__content-wrapper {
       max-height: 350px;
     }
     
-    .faq-drawer__trigger:checked + .faq-drawer__title::after {
+.faq-drawer__trigger:checked + .faq-drawer__title::after {
       transform: rotate(-45deg);
       transition: 0.25s ease-in-out;
     }
     
-    input[type="checkbox"] {
+input[type="checkbox"] {
       display: none;
     }
     
-    @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
       .ccontainer {
         padding: 80px;
       }
     }
+    
+.conttainer {
+      padding-left: 40px;
+      padding-right: 7px;
+    }
+      
+    
+.pict {
+      width: 85%;
+      height: 78%;
+    }
+    
+.dev-names {
+      padding-left: 40px;
+    }
+    
+.n1 {
+      padding-left: 65px;
+    }
+    
+.n2 {
+      padding-left: 39px;
+    }
+    
+.n3 {
+      padding-left: 40px;
+    }
+    
+.n4 {
+      padding-left: 60px;
+    }
+    
+.r1 {
+      
+      padding-left: 55px;
+    }
+    
+.r2 {
+      
+      padding-left: 67px;
+    }
+    
+.r3 {
+      
+      padding-left: 67px;
+    }
+    
+.r4 {
+      
+      padding-left: 70px;
+    }
+    
+    
+    
+    
     

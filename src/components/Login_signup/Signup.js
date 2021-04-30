@@ -13,7 +13,9 @@ const Signup = (props) => {
     username : "",
     role : "donor",
     password : "",
-    description : ""
+    description : "",
+    address: "",
+    contact:null
   })
 
   const changeHandler = (event)=>{
@@ -36,7 +38,7 @@ const Signup = (props) => {
             <Row form>
               <Col md={6}>
                 <FormGroup>
-                  <Label for="exampleEmail">Email/Username</Label>
+                  <Label for="exampleEmail">Name</Label>
                   <Input type="text" name="name" id="exampleEmail" placeholder="Enter name" 
                   onChange={changeHandler} value={signupCred.name}/>
                 </FormGroup>
@@ -50,7 +52,7 @@ const Signup = (props) => {
               </Col>
             </Row>
             <FormGroup className='usernamebox'>
-              <Label for="exampleUsername">Name</Label>
+              <Label for="exampleUsername">Email/UserName</Label>
               <Input type="text" name="username" id="name" placeholder="Enter Your UserName"
               onChange={changeHandler} value={signupCred.username}/>
             </FormGroup>
@@ -68,6 +70,18 @@ const Signup = (props) => {
             <FormGroup className='usernamebox'>
               <Label for="description">Description</Label>
               <Input type="textarea" name="description" id="description" value={signupCred.description} 
+              onChange={changeHandler}/>
+            </FormGroup>
+
+            <FormGroup className='usernamebox'>
+              <Label for="address">Address</Label>
+              <Input type="textarea" name="address" id="address" value={signupCred.address} 
+              onChange={changeHandler}/>
+            </FormGroup>
+
+            <FormGroup className='usernamebox'>
+              <Label for="contact">Contact</Label>
+              <Input type="text" name="contact" id="contact" value={signupCred.contact} 
               onChange={changeHandler}/>
             </FormGroup>
 

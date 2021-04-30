@@ -1,17 +1,56 @@
-import React from "react";
+import React,{Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./blog_page.css";
 import img1 from './pic.png';
 import pic1 from './pic1.png';
 import pic2 from './pic2.png';
 import pic3 from './pic3.png';
+import { connect } from 'react-redux';
+import { fetchNgoBlogs } from '../../redux/actions/ngoblogs';
 import {Image , Container ,Button , Row , Col , Card , Jumbotron} from 'react-bootstrap'
-import BlogArticle from './/blog_article';
 
-function blog() {
-    
-    return (
-        <div className="blogpage">
+const mapStateToProps = (state) => {
+    return {
+        ngoBlogs: state.ngoblogs,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchNgoBlogs: ()=>dispatch(fetchNgoBlogs()),
+    };
+};
+
+class blog extends Component {
+    componentDidMount(){
+        this.props.fetchNgoBlogs();
+    }
+    renderNgoBlogs = (ngoBlogs,key) => {
+        return (
+            <Row className="article-card">
+            <div>
+                    <Image src={img1}  className="article-card-image" />
+            </div>
+            <div>
+                 <Card.Body>
+                 <Card.Title className=" card-title weight" style={{fontSize: '1.9rem'}}>{ngoBlogs.heading}</Card.Title>
+                 <Card.Text className="card-title-desc">
+                         {ngoBlogs.author.name} | 23 Apr 2021
+                 </Card.Text>
+                 <Button variant="light" size="sm" className="read-more-btn">Read more</Button>
+                 </Card.Body>
+            </div>
+            </Row>
+        )
+    };
+    render() {
+        if(this.props.ngoBlogs.isLoading) {
+            return <h1>Loading</h1>
+        } else if(this.props.ngoBlogs.errMess) {
+            return <h1>{this.props.ngoBlogs.errMess}</h1>
+        }
+        return (
+            <div className="blogpage">
 
             <Jumbotron fluid className="blog-title-main" style={{backgroundColor: '#fff'}}>
                 <Container>
@@ -26,51 +65,11 @@ function blog() {
                 <Row className="row-of-article ">
                     <Col className="left-col">
                         <h2 className="hr-line"><span className="hr-line-content">LATEST POSTS</span></h2>
-                        
-                        <Row className="article-card">
-                            <div>
-                                <Image src={img1}  className="article-card-image" />
-                            </div>
-                            <div>
-                                <Card.Body>
-                                    <Card.Title className=" card-title weight" style={{fontSize: '1.9rem'}}>Reconditioning the benefits system for a stronger COVID-19 recovery</Card.Title>
-                                    <Card.Text className="card-title-desc">
-                                        Rachel Green | 23 Apr 2021
-                                    </Card.Text>
-                                    <Button variant="light" size="sm" className="read-more-btn">Read more</Button>
-                                </Card.Body>
-                            </div>
-                        </Row>
-
-                        <Row className="article-card">
-                            <div>
-                                <Image src={img1}  className="article-card-image" />
-                            </div>
-                            <div>
-                                <Card.Body>
-                                    <Card.Title className=" card-title weight" style={{fontSize: '1.9rem'}}>Reconditioning the benefits system for a stronger COVID-19 recovery</Card.Title>
-                                    <Card.Text className="card-title-desc">
-                                        Rachel Green | 23 Apr 2021
-                                    </Card.Text>
-                                    <Button variant="light" size="sm" className="read-more-btn">Read more</Button>
-                                </Card.Body>
-                            </div>
-                        </Row>
-
-                        <Row className="article-card">
-                            <div>
-                                <Image src={img1}  className="article-card-image" />
-                            </div>
-                            <div>
-                                <Card.Body>
-                                    <Card.Title className=" card-title weight" style={{fontSize: '1.9rem'}}>Reconditioning the benefits system for a stronger COVID-19 recovery</Card.Title>
-                                    <Card.Text className="card-title-desc">
-                                        Rachel Green | 23 Apr 2021
-                                    </Card.Text>
-                                    <Button variant="light" size="sm" className="read-more-btn">Read more</Button>
-                                </Card.Body>
-                            </div>
-                        </Row>
+                        <div classname="row">
+                         {this.props.ngoBlogs.ngoBlogs.map((item,key)=>{
+                             this.renderNgoBlogs(item,key)
+                         })}
+                        </div>
                     </Col>
 
                     <Col xs lg="4" className="right-col">
@@ -128,13 +127,9 @@ function blog() {
                     </Row>
                 </Container>
             </Jumbotron>
-
-
-
-            
-
-            
-        </div>
-        );
+            </div>
+        )
     }
-    export default blog;
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(blog);

@@ -5,7 +5,6 @@ import Header from './header_footer/Navbar';
 import Footer from './header_footer/footer';
 import Addblogs from './forms/addblog';
 import AddMedicine from './forms/addmedicine';
-import Medicines from './medicines/medicine';
 import home from './home_page/home';
 //import Blog from './blog_page_article/blog_page';
 import about from './about/about';
@@ -57,7 +56,6 @@ class Main extends Component {
                         <Route exact path='/addblog' component={Addblogs} />
                         <Route exact path='/about' component={about} />     
                         <Route exact path='/donorspeaks' component={DonorSpeaks} />  
-                        <Route exact path='/medicines'  component={() => <Medicines medicines={this.props.medicines} />}  />
                         <Route path='/ngoBeneficiary' component={ngoBeneficiary} />
                         <Route exact path ='/Login' component={Login}   />
                         <Route exact path ='/Signup' component={Signup}   />

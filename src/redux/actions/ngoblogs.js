@@ -1,8 +1,10 @@
 //---------------------------------------NGOBLOG DEMANDS------------------------------------------------//
+import * as ActionTypes from "../ActionTypes";
+import { baseUrl } from "../../shared/baseUrl";
 
-export const addNgoBlog = (ngoblog) => ({
+export const addNgoBlogs = (ngoblogs) => ({
 	type: ActionTypes.ADD_NGOBLOG,
-	payload: ngoblog,
+	payload: ngoblogs,
 });
 
 export const postNgoBlog = (ngoblog) => (dispatch) => {
@@ -13,7 +15,6 @@ export const postNgoBlog = (ngoblog) => (dispatch) => {
 		body: JSON.stringify(newNgoBlog),
 		headers: {
 			"Content-Type": "application/json",
-			Authorization: bearer,
 		},
 		//credentials: "same-origin"
 	})
@@ -41,10 +42,10 @@ export const postNgoBlog = (ngoblog) => (dispatch) => {
 		});
 };
 
-export const fetchNgoBlog = () => (dispatch) => {
-	dispatch(ngoblogLoading(true));
+export const fetchNgoBlogs = () => (dispatch) => {
+	dispatch(ngoblogsLoading(true));
 
-	return fetch(baseUrl + "ngoblog")
+	return fetch(baseUrl + "ngoblogs")
 		.then(
 			(response) => {
 				if (response.ok) {
@@ -63,8 +64,8 @@ export const fetchNgoBlog = () => (dispatch) => {
 			}
 		)
 		.then((response) => response.json())
-		.then((ngoblog) => dispatch(addNgoBlog(ngoblog)))
-		.catch((error) => dispatch(ngoblogFailed(error.message)));
+		.then((ngoblogs) => dispatch(addNgoBlogs(ngoblogs)))
+		.catch((error) => dispatch(ngoblogsFailed(error.message)));
 };
 
 
@@ -74,7 +75,6 @@ export const deleteNgoBlog = (ngoblogId) => (dispatch) => {
 		method: "DELETE",
 		headers: {
 			"Content-Type": "application/json",
-			Authorization: bearer,
 		},
         //credentials: "same-origin"
     })
@@ -93,7 +93,7 @@ export const deleteNgoBlog = (ngoblogId) => (dispatch) => {
     .then(response => response.json())
     .then(() => dispatch(removeNgoBlog(ngoblogId)))
 	.then(() => console.log('NgoBlog deleted!!'))
-    .catch(error => dispatch(ngoblogFailed(error.message)));
+    .catch(error => dispatch(ngoblogsFailed(error.message)));
 };
 
 export const removeNgoBlog = (ngoblogId) => ({
@@ -101,12 +101,12 @@ export const removeNgoBlog = (ngoblogId) => ({
 	payload: ngoblogId,
 });
 
-export const ngoblogLoading = () => ({
-	type: ActionTypes.NGOBLOG_LOADING,
+export const ngoblogsLoading = () => ({
+	type: ActionTypes.NGOBLOGS_LOADING,
 });
 
-export const ngoblogFailed = (errmess) => ({
-	type: ActionTypes.NGOBLOG_FAILED,
+export const ngoblogsFailed = (errmess) => ({
+	type: ActionTypes.NGOBLOGS_FAILED,
 	payload: errmess,
 });
 

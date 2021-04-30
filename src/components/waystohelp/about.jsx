@@ -1,4 +1,5 @@
 import aboutimg from '../../images/Caraousel/Car2.jpg'
+import './wth.css'
 
 export const About = (props) => {
     return (
@@ -10,7 +11,7 @@ export const About = (props) => {
               <img src={aboutimg} className='img-responsive' alt='' />{' '}
             </div>
             <div className='col-xs-12 col-md-6 about-pad'>
-              <div className='about-text'>
+              <div className='about-text '>
                 <h2>Why Donate?</h2>
                 <p>{props.data ? props.data.paragraph : 'loading...'}</p>
                 </div>

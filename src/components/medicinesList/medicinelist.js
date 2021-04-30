@@ -4,15 +4,63 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 
 import { Row, Col } from "react-bootstrap";
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import { connect } from 'react-redux' ; 
+import { fetchMedicines } from '../../redux/actions/medicines';
+
+const mapStateToProps = (state) => {
+  return {
+    medicines: state.medicines,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchMedicines: () => dispatch(fetchMedicines())
+  }
+}
 
 class medlist extends Component {
-    constructor(props) {
-      super(props);
+    
+    componentDidMount() {
+      this.props.fetchMedicines();
     }
-    render() {
-      return (
 
+    renderMedicines = (medicines,key) => {
+      return (
+        <div>
+        <Col md={4} key={key}>
+         
+         <Card className="cdd-style bkg-im">
+  
+        <Card.Body>
+     
+      
+        <Card.Title className="medi-name">Paracetamol</Card.Title>
+  
+       <br></br>
+      <Card.Text>
+       <p><i className="cdd-text">Amount: </i>{medicines.amount}</p>
+       <p><i className="cdd-text">Expiry: </i>{medicines.expirydate}</p>
+       <p><i className="cdd-text">Donor: </i>{medicines.author.name}</p>
+       <p><i className="cdd-text">Address: </i>{medicines.address}</p>
+       </Card.Text>
+       <Button variant="outline-primary"  className="btt-style">Contact now</Button>{' '}
+       </Card.Body>
+       </Card>
+       </Col>  
+        </div>
+      )
+    }
+
+    render() {
+      if(this.props.medicines.isLoading) {
+        return <h1>Loading</h1>
+      } else if(this.props.medicines.errMess) {
+        return <h1>{this.props.medicines.errMess}</h1>
+      }
+      return (
+        
         <div >
           <div className="head text-center">
           <h1>Medicines Available</h1>
@@ -23,93 +71,15 @@ class medlist extends Component {
 
           <div className="containerr">
         <Row>
-          <Col md={4}>
-         
-         <Card className="cdd-style bkg-im">
-  
-  <Card.Body>
-     
-      
-    <Card.Title className="medi-name">Paracetamol</Card.Title>
-  
-    <br></br>
-    <Card.Text>
-     <p><i className="cdd-text">Amount: </i>2 packets</p>
-     <p><i className="cdd-text">Expiry: </i>25/10/2021</p>
-     <p><i className="cdd-text">Donor: </i>Joey</p>
-     <p><i className="cdd-text">Address: </i>#252 Sector-16 A, Chandigarh</p>
-    </Card.Text>
-    <Button variant="outline-primary"  className="btt-style">Contact now</Button>{' '}
-  </Card.Body>
-</Card>
-</Col>  
-
-<Col md={4}  >
-         <Card className="cdd-style bkg-im">
-  <Card.Body>
-    
-    
-    <Card.Title className="medi-name">Azithromycin</Card.Title>
-    <br></br>
-    <Card.Text>
-    <p><i className="cdd-text">Amount: </i>4 packets</p>
-     <p><i className="cdd-text">Expiry: </i>27/05/2023</p>
-     <p><i className="cdd-text">Donor: </i>Joey</p>
-     <p><i className="cdd-text">Address: </i>#252 Sector-16 A, Chandigarh </p>
-    </Card.Text>
-    <Button variant="outline-primary" className="btt-style">Contact Now</Button>{' '}
-  </Card.Body>
-</Card>
-</Col>
-<Col md={4}  >
-         <Card className="cdd-style bkg-im">
-  <Card.Body>
-   
-   
-    <Card.Title  className="medi-name">Saridon</Card.Title>
-    <br></br>
-    <Card.Text>
-    <p><i className="cdd-text">Amount: </i> 3 packets</p>
-     <p><i className="cdd-text">Expiry: </i>5/12/2022</p>
-     <p><i className="cdd-text">Donor: </i>Joey</p>
-     <p><i className="cdd-text">Address: </i>#252 Sector-16 A, Chandigarh</p>
-    </Card.Text>
-    
-    <Button variant="outline-primary"  className="btt-style">Contact Now</Button>{' '}
-  </Card.Body>
-</Card>
-
-  </Col>
-  </Row>
-  <br></br>
-
-  <Row>
-  <Col md={4}  >
-         <Card className="cdd-style bkg-im">
-  <Card.Body>
-   
-   
-    <Card.Title  className="medi-name">Saridon</Card.Title>
-    <br></br>
-    <Card.Text>
-    <p><i className="cdd-text">Amount: </i> 3 packets</p>
-     <p><i className="cdd-text">Expiry: </i>5/12/2022</p>
-     <p><i className="cdd-text">Donor: </i>Joey</p>
-     <p><i className="cdd-text">Address: </i>#252 Sector-16 A, Chandigarh</p>
-    </Card.Text>
-    
-    <Button variant="outline-primary"  className="btt-style">Contact Now</Button>{' '}
-  </Card.Body>
-</Card>
-</Col>
-</Row>
-
-    
-      </div>
-      
-      </div>
+          {this.props.medicines.medicines.map((item,key) =>
+            {this.renderMedicines(item,key)
+            } 
+            )}
+      </Row>
+      </div> 
+  </div>
 
 )
 }
 }
-export default medlist;
+export default connect(mapStateToProps,mapDispatchToProps)(medlist);
