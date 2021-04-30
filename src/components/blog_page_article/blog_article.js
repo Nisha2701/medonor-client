@@ -11,14 +11,14 @@ import {Jumbotron , Container , Row , Col , Button , Card , CardDeck, Form , Bad
 function BlogArticle() {
     return (
         <div className="blog-article">
-            <Jumbotron className="article-heading">
+            <Jumbotron className="article-heading" style={{backgroundColor: '#fff'}}>
                 <Container className="article-heading-content">
-                    <h3 className="article-heading-title">Reconditioning the benefits system for a stronger COVID-19 recovery</h3>
+                    <h3 className="article-heading-title" style={{fontSize:'5rem' , color: '#1c8a85'}}>Reconditioning the benefits system for a stronger COVID-19 recovery</h3>
                     <p> <span className="span-published-by">Published by</span>  <span className="span-publisher">Rachel Green</span> | <span>23 Apr 2021</span></p>
                 </Container>
             </Jumbotron>
             <Container fluid="sm" className="blog-article-text">
-                    <p>
+                    <p style={{fontSize:'1.7rem'}}>
                         
                             <img src={img1} className="blog-article-text-image" />
                         
@@ -51,7 +51,7 @@ function BlogArticle() {
                         There is a lot to learn from the pandemic. Rapid changes to Universal Credit processes at the start of the first UK lockdown helped the benefits system function better. As we move away from lockdown and into recovery, the government needs to build on the positive changes we have witnessed and continue to protect health through our welfare system.
                     </p>
             </Container>
-            <Jumbotron className="note-jumbo">
+            <Jumbotron className="note-jumbo" style={{backgroundColor: '#DAF1F0'}}>
                 <Container>
                     <Row>
                         <Col>
@@ -61,7 +61,7 @@ function BlogArticle() {
                                         <p><img src={pic1} className="small-note-image" /></p>
                                     </Col>
                                     <Col md="auto">
-                                        <p className="small-note"> All our efforts are made possible only because of your support</p>
+                                        <p className="small-note" style={{fontSize: '1.3rem'}}> All our efforts are made possible only because of your support</p>
                                     </Col>
                                 </Row>
                             </Card>
@@ -73,7 +73,7 @@ function BlogArticle() {
                                         <p><img src={pic2} className="small-note-image" /></p>
                                     </Col>
                                     <Col md="auto">
-                                        <p className="small-note"> Your donations are tax exempted under 80G of the Indian Income Tax Act</p>
+                                        <p className="small-note" style={{fontSize: '1.3rem'}}> Your donations are tax exempted under 80G of the Indian Income Tax Act</p>
                                     </Col>
                                 </Row>
                             </Card>
@@ -85,7 +85,7 @@ function BlogArticle() {
                                         <p><img src={pic3} className="small-note-image" /></p>
                                     </Col>
                                     <Col md="auto">
-                                        <p className="small-note"> Your donation transactions are completely safe and secure</p>
+                                        <p className="small-note" style={{fontSize: '1.3rem'}}> Your donation transactions are completely safe and secure</p>
                                     </Col>
                                 </Row>
                             </Card>

@@ -4,6 +4,7 @@ import './Signup.css';
 
 import {connect} from "react-redux";
 import * as userActions from "../../redux/actions/userActions";
+import display5 from "../../images/LOGo.jpg"
 
 const Signup = (props) => {
 
@@ -12,7 +13,9 @@ const Signup = (props) => {
     username : "",
     role : "donor",
     password : "",
-    description : ""
+    description : "",
+    address: "",
+    contact:null
   })
 
   const changeHandler = (event)=>{
@@ -25,50 +28,72 @@ const Signup = (props) => {
   }
 
   return (
-    <Form className='Signup'>
-      <Row form>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="exampleEmail">Email/Username</Label>
-            <Input type="text" name="name" id="exampleEmail" placeholder="Enter name" 
-             onChange={changeHandler} value={signupCred.name}/>
-          </FormGroup>
-        </Col>
-        <Col md={6}>
-          <FormGroup>
-            <Label for="examplePassword">Password</Label>
-            <Input type="password" name="password" id="examplePassword" placeholder="Enter Password" 
-             onChange={changeHandler} value={signupCred.password}/>
-          </FormGroup>
-        </Col>
-      </Row>
-      <FormGroup className='usernamebox'>
-        <Label for="exampleUsername">Name</Label>
-        <Input type="text" name="username" id="name" placeholder="Enter Your UserName"
-         onChange={changeHandler} value={signupCred.username}/>
-      </FormGroup>
+    <div className="SignupContainer">
+      <Form className='Signup'>
+        <Row>
+          <Col className="logo">
+          <img src={display5}></img>
+          </Col>
+          <Col className="SignupForm">
+            <Row form>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="exampleEmail">Name</Label>
+                  <Input type="text" name="name" id="exampleEmail" placeholder="Enter name" 
+                  onChange={changeHandler} value={signupCred.name}/>
+                </FormGroup>
+              </Col>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="examplePassword">Password</Label>
+                  <Input type="password" name="password" id="examplePassword" placeholder="Enter Password" 
+                  onChange={changeHandler} value={signupCred.password}/>
+                </FormGroup>
+              </Col>
+            </Row>
+            <FormGroup className='usernamebox'>
+              <Label for="exampleUsername">Email/UserName</Label>
+              <Input type="text" name="username" id="name" placeholder="Enter Your UserName"
+              onChange={changeHandler} value={signupCred.username}/>
+            </FormGroup>
 
-      <FormGroup className='usernamebox'>
-      <Label for="exampleRole">Role</Label>
-      <Input type="select" name="role" id="exampleRole"
-       onChange={changeHandler} value={signupCred.role}>
-          <option>donor</option>
-          <option>ngo</option>
-          <option>admin</option>
-        </Input>
-      </FormGroup>
+            <FormGroup className='usernamebox'>
+            <Label for="exampleRole">Role</Label>
+            <Input type="select" name="role" id="exampleRole"
+            onChange={changeHandler} value={signupCred.role}>
+                <option>donor</option>
+                <option>ngo</option>
+                <option>admin</option>
+              </Input>
+            </FormGroup>
 
-      <FormGroup className='usernamebox'>
-        <Label for="description">Description</Label>
-        <Input type="textarea" name="description" id="description" value={signupCred.description} 
-        onChange={changeHandler}/>
-      </FormGroup>
+            <FormGroup className='usernamebox'>
+              <Label for="description">Description</Label>
+              <Input type="textarea" name="description" id="description" value={signupCred.description} 
+              onChange={changeHandler}/>
+            </FormGroup>
 
-      <Button className='butto' onClick={()=>{
-        console.log(signupCred)
-        props.signupInit(signupCred)
-      }}>Sign Up</Button>
-    </Form>
+            <FormGroup className='usernamebox'>
+              <Label for="address">Address</Label>
+              <Input type="textarea" name="address" id="address" value={signupCred.address} 
+              onChange={changeHandler}/>
+            </FormGroup>
+
+            <FormGroup className='usernamebox'>
+              <Label for="contact">Contact</Label>
+              <Input type="text" name="contact" id="contact" value={signupCred.contact} 
+              onChange={changeHandler}/>
+            </FormGroup>
+
+            <Button className='buto' onClick={()=>{
+              console.log(signupCred)
+              props.signupInit(signupCred)
+            }}>Sign Up</Button>
+          </Col>
+        </Row>
+      </Form>
+    </div>
+      
   );
 }
 

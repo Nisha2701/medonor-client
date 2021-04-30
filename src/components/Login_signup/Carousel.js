@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import display1 from '../../images/Caraousel/Caraousel-image2.jpg';
-import display2 from "../../images/blogform.jpg";
-import display3 from "../../images/Caraousel/Caraousel-image2.jpg";
-import display4 from "../../images/Caraousel/Caraousel-Image-last.jpg";
+import display1 from '../../images/Caraousel/Car1.jpg';
+import display2 from "../../images/Caraousel/Car2.jpg";
+import display3 from "../../images/Caraousel/Car3.jpg";
+import display4 from "../../images/Caraousel/Car4.jpg";
 import {
   Carousel,CarouselItem,CarouselControl,CarouselIndicators} from 'reactstrap';
   import './Login.css'

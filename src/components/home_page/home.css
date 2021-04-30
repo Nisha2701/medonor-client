@@ -1,34 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Shippori+Mincho&display=swap');
-.homepage{
-    font-family: 'Shippori Mincho', serif;
-}
-.jumbo{
-    background-color: #224D57;
+
+.jumbo-home{
+    background-color: #fff;
     text-align: center;
-    color: white;
+    color: #0D9EA4;
+    margin: 0;
+    margin: 0;
 }
 
-.logo{
+.logo-home{
     height: 100px;
     width: 100px;
 }
 
-.content h3{
+.content-h3-home{
     color: #0D9EA4; 
-    font-size: 4rem;
+    font-size: 6rem;
 }
 
 
-.content .extra{
+.extra{
     color: #a6b4b4;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .content .para{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 img {
     width: 100%;
     height: auto;
+}
+
+.home-image-5{
+    height: 350px;
+    width: 350px;
+}
+
+.sub-sub-para{
+    color: #a6b4b4;
 }
