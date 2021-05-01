@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+**Welcome to ME-DONOR_FRONTEND 🚑✌** <br />
+Our project aims to counter two problems.<br />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+💨one faced by NGO(s) workers searching for particular medicines<br />
+💨for donors to look for NGOs eager to use the unused medicienes to distribute among needy people.<br />
 
-## Available Scripts
+It will cut back the need to go to different hospitals/medicine providers for medicines. The shop-vendors/individual can directly learn from the website and contact that person/shop. It makes the process effortless, attracting more people to volunteer for the organization. <br />
 
-In the project directory, you can run:
+✨
+Repo Links👇: <br />
+Backend:https://github.com/ME-Donor/Medonor-Server.git <br />
+Frontend:https://github.com/ME-Donor/Medonor-frontend.git <br />
+Clone both of them by command git clone <br />
 
-### `yarn start`
+Install <br />
+In root directory use given command to install packages and dependencies. <br />
+npm install or yarn install <br />
+ 
+Run <br />
+To run the server use : npm start <br />
+To run the frontend use : npm start <br />
+Our backend is running on port 5000 and frontend is running on port 3000. <br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.\ <br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. <br />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Debugging
+To use react developer tools run npm run react-devtools. <br/>
 
-### `yarn test`
+Otherwise, you need to run adb reverse tcp:8097 tcp:8097
+For more details, regarding developer tools, you can refer https://www.npmjs.com/package/react-devtools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technologies used<br />
+reactjs bootstrap reactstrap redux <br />
 
-### `yarn build`
+Show your support <br />
+Give a ⭐️ if this project helped you! <br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MEDONOR💌 - Made with love for better web<br />
