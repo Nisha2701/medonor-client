@@ -27,7 +27,8 @@ class blog extends Component {
     }
     renderNgoBlogs = (ngoBlogs,key) => {
         return (
-            <Row className="article-card">
+            <div>
+            <Row className="article-card" key={key}>
             <div>
                     <Image src={img1}  className="article-card-image" />
             </div>
@@ -41,6 +42,7 @@ class blog extends Component {
                  </Card.Body>
             </div>
             </Row>
+            </div>
         )
     };
     render() {
@@ -65,11 +67,11 @@ class blog extends Component {
                 <Row className="row-of-article ">
                     <Col className="left-col">
                         <h2 className="hr-line"><span className="hr-line-content">LATEST POSTS</span></h2>
-                        <div classname="row">
-                         {this.props.ngoBlogs.ngoBlogs.map((item,key)=>{
+                        <Row>
+                         {this.props.ngoBlogs.ngoBlogs.map((item,key)=>
                              this.renderNgoBlogs(item,key)
-                         })}
-                        </div>
+                         )}
+                        </Row>
                     </Col>
 
                     <Col xs lg="4" className="right-col">

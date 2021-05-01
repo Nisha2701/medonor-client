@@ -2,19 +2,22 @@
 import * as ActionTypes from "../ActionTypes";
 import { baseUrl } from "../../shared/baseUrl";
 
-export const addNgoBlogs = (ngoblogs) => ({
+export const addNgoBlog = (ngoblog) => ({
 	type: ActionTypes.ADD_NGOBLOG,
-	payload: ngoblogs,
+	payload: ngoblog,
 });
 
 export const postNgoBlog = (ngoblog) => (dispatch) => {
 	const newNgoBlog = ngoblog;
+	newNgoBlog.dateNum = Date.now();
+	const bearer = "Bearer" + localStorage.getItem("token");
 
 	return fetch(baseUrl + "ngoblog", {
 		method: "POST",
 		body: JSON.stringify(newNgoBlog),
 		headers: {
 			"Content-Type": "application/json",
+			Authorization: bearer,
 		},
 		//credentials: "same-origin"
 	})
@@ -110,7 +113,7 @@ export const ngoblogsFailed = (errmess) => ({
 	payload: errmess,
 });
 
-export const addNgoBlog = (ngoblog) => ({
-	type: ActionTypes.ADD_NGOBLOG,
-	payload: ngoblog,
+export const addNgoBlogs = (ngoblogs) => ({
+	type: ActionTypes.ADD_NGOBLOGS,
+	payload: ngoblogs,
 });

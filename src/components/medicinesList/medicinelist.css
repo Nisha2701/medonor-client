@@ -14,12 +14,14 @@
 .bkg-im{
  
     background-image: url("../../images/greyb32.jpg");
+    margin-bottom: 4px;
 }
 
 .cdd-style { 
     width: 28.5rem; 
     margin-right: 2px;
-   
+    margin-left:7 px;
+    margin-bottom: 10px;
     box-shadow: 0 10px 20px #DADFE5, 0 4px 8px #DADFE5;
  
      

@@ -36,14 +36,14 @@ class medlist extends Component {
         <Card.Body>
      
       
-        <Card.Title className="medi-name">Paracetamol</Card.Title>
+        <Card.Title className="medi-name">{medicines.name}</Card.Title>
   
        <br></br>
       <Card.Text>
        <p><i className="cdd-text">Amount: </i>{medicines.amount}</p>
        <p><i className="cdd-text">Expiry: </i>{medicines.expirydate}</p>
        <p><i className="cdd-text">Donor: </i>{medicines.author.name}</p>
-       <p><i className="cdd-text">Address: </i>{medicines.address}</p>
+       <p><i className="cdd-text">Address: </i>{medicines.author.address}</p>
        </Card.Text>
        <Button variant="outline-primary"  className="btt-style">Contact now</Button>{' '}
        </Card.Body>
@@ -72,8 +72,8 @@ class medlist extends Component {
           <div className="containerr">
         <Row>
           {this.props.medicines.medicines.map((item,key) =>
-            {this.renderMedicines(item,key)
-            } 
+            this.renderMedicines(item,key)
+             
             )}
       </Row>
       </div> 
