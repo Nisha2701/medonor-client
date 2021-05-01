@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchNgoBeneficiaries: ()=>dispatch(fetchNgoBeneficiaries()),
+    fetchNgoBeneficiaries: ()=> dispatch(fetchNgoBeneficiaries()),
   };
 };
 
@@ -26,16 +26,16 @@ class NgoBeneficiaries extends Component {
 
   renderNgoBeneficiaries = (ngobeneficiaries,key) => {
     return (
-      <Col md={6}>
+      <Col md={6}  key={key}>
       <Row className="list-setting">
-            <ListGroup.Item className="list-style" key={key}>
+            <ListGroup.Item className="list-style">
                  <p>{ngobeneficiaries.description} </p>
                  
                  <i className="b-name" >Name</i>
                  <p className="b-name">{ngobeneficiaries.author.name}</p>
                 
                  </ListGroup.Item>
-                 </Row>
+      </Row>
       </Col>
     )
   }
@@ -56,15 +56,11 @@ class NgoBeneficiaries extends Component {
         <br></br>
 
         <ListGroup>
+        
               {this.props.ngobeneficiaries.ngobeneficiaries.map((item, key)=>
                 this.renderNgoBeneficiaries(item,key)
               )}
-          
         </ListGroup>
-
-
-
-
       </div>
     )
   }

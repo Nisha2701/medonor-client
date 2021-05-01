@@ -1,12 +1,26 @@
 // import React, { Component } from 'react'
 // import {Container, Row, Col,Button} from 'react-bootstrap';
-// import { Breadcrumb, BreadcrumbItem, Jumbotron } from "reactstrap";
+// import { Breadcrumb, BreadcrumbItem, Jumbotron,Input } from "reactstrap";
 // import {Link} from 'react-router-dom'
 // import './forms.css'
 // import Form from 'react-bootstrap/Form';
 // import Select from 'react-select';
 // import blogFormBG from "../../images/blogform.jpg";
+// import  {postNgoBlog} from '../../redux/actions/ngoblogs';
+// import {connect} from "react-redux";
 
+// const mapStateToProps = (state) =>{
+//    return {
+//       name:state.user.name,
+//       token:state.user.token
+//    }
+// }
+
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//     postNgoBlog : (ngoblog,name,token) => dispatch(postNgoBlog(ngoblog,name,token))
+//     }
+// }
 
 
 // class addBlogs extends Component {
@@ -39,7 +53,8 @@
 //         if(isValid){
 //                 const newBlog = {
 //                     heading: this.state.title,
-//                     description: this.state.description
+//                     description: this.state.description,
+//                     author:this.props.user.name
 //                 };
 //                 this.props.postNgoBlog(newBlog);
             
@@ -95,12 +110,11 @@
 //                                         <input name="heading" className="form-control" type="text" value={this.state.heading} placeholder="Give a descriptive Heading." onChange={this.handleInputChange}/>
 //                                         <div className="invalid__feedback">{this.state.errors.heading}</div>
 //                                     </Form.Group>
-
-//                                     <Form.Group>
-//                                     <Form.Label><span className="form__icon"></span>Content</Form.Label>
-//                                     <Form.Control as="textarea" rows={10} type="text" value={this.state.description} placeholder="Type your Content here" onChange={this.handleInputChange}/>
-//                                         <div className="invalid__feedback">{this.state.errors.description}</div>                                       
-//                                     </Form.Group>
+//                                  <Form.Group controlId="formBasicEmail">
+//                                  <Form.Label>Description</Form.Label>
+//                                  <Input type="textarea" name="text" rows= {10} value={this.state.description} placeholder="Write blog content here" onChange={this.handleInputChange} />
+//                                 <div className="invalid__feedback">{this.state.errors.description}</div>
+//                                 </Form.Group>
 //                                 <Button className='mt-4' onClick={this.handleSubmit}  variant="info"><span className='fa fa-paper-plane mr-3' />Publish Blog</Button>
 //                             </Form>
 //                           </Jumbotron>
@@ -113,5 +127,6 @@
 //         )
 //       }
 // }
+
 
 // export default addBlogs;
