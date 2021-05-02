@@ -12,11 +12,12 @@ export const addNgoBlogs = (ngoblogs) => (dispatch) => {
 export const postNgoBlog = (ngoblog) => (dispatch) => {
   const newNgoBlog = ngoblog;
 
-  return fetch(baseUrl + 'ngoblog', {
+  return fetch(baseUrl + 'ngoblogs', {
     method: 'POST',
     body: JSON.stringify(newNgoBlog),
     headers: {
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
     //credentials: "same-origin"
   })
