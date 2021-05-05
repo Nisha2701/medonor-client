@@ -12,14 +12,17 @@ const initialState = {
 
 const UserReducer = (state = initialState, action) => {
   switch (action.type) {
-    // case actionTypes.LOGOUT_SUCCESS:
-    //   return {
-    //     ...state,
-    //     Username: null,
-    //     email: null,
-    //     role: null,
-    //     token: null,
-    //   };
+    case actionTypes.LOGOUT_SUCCESS:
+      return {
+        ...state,
+        username: null,
+        role: null,
+        token: null,
+        contact : null,
+        address : null,
+        name : null,
+        description : null
+      };
 
     case actionTypes.LOGIN_SUCCESS:
       return {

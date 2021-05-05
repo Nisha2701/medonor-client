@@ -4,6 +4,7 @@ import "./Navbar.css";
 import {Navbar , Nav , Button } from 'react-bootstrap';
 import logo from './logo3.png';
 import {connect} from "react-redux";
+import {logout} from '../../redux/actions/userActions';
 
 function Header(props) {
     
@@ -33,6 +34,8 @@ function Header(props) {
                         <Nav.Link eventKey={3} href="/wth" className="navbar-main-links-hf " >
                             <span className="navbar-nav-links-hf ">Ways to Help</span>
                         </Nav.Link>
+                        <Nav.Link eventKey={4} href='/ngoList' className="navbar-main-links-hf">
+                        <span className="navbar-nav-links-hf">NgoList</span></Nav.Link>
                      { props.role && <> 
                       <Nav.Link eventKey={4} href="/blog" className="navbar-main-links-hf " >
                             <span className="navbar-nav-links-hf ">Blog</span>
@@ -40,10 +43,20 @@ function Header(props) {
                       <Nav.Link eventKey={5} href="/addblog" className="navbar-main-links-hf" >
                            <span className="navbar-nav-links-hf">Add Blog</span>
                       </Nav.Link>  
-                        
                         </>}
-                      { props.role === null && <><Button variant="outline-light" href="/Signup" className="sign-in-btn-hf" inline style={{border: "1px solid #fff" , borderRadius:"20px"}}>Sign in</Button>{' '}</>} 
- </Nav>
+                      { props.role=== "donor" && <> 
+                      <Nav.Link eventKey={4} href="/donorspeaks" className="navbar-main-links-hf " >
+                      <span className="navbar-nav-links-hf ">Donorspeaks</span>
+                  </Nav.Link>
+                      </>}   
+                      { props.role === null && <>
+                        <Button variant="outline-light" href="/Login" className="sign-in-btn-hf" inline style={{border: "1px solid #fff" , borderRadius:"20px"}}>Sign in</Button>
+                        {' '}</>} 
+                    { props.role != null && <>
+                            <Button variant="outline-light" onClick={props.logout} className="sign-in-btn-hf" inline style={{border: "1px solid #fff" , borderRadius:"20px"}}>Log out</Button>
+                            {' '}</>} 
+                          
+                      </Nav>
                     
                     
                 </Navbar.Collapse>
@@ -52,9 +65,15 @@ function Header(props) {
     );
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        logout : () => dispatch(logout()),
+    }
+}
+
 const mapStateToProps = (state)=>{
     return {
         role : state.user.role
     }
 }
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps,mapDispatchToProps)(Header);

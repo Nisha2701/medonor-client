@@ -4,12 +4,13 @@ import history from '../history'
 import Header from './header_footer/Navbar';
 import Footer from './header_footer/footer';
 import Addblogs from './forms/addblog';
-import AddMedicine from './forms/addmedicine';
+import Addmedicines from './forms/addmedicine';
 import home from './home_page/home';
 //import Blog from './blog_page_article/blog_page';
 import about from './about/about';
+import addDonorSpeak from './forms/adddonorspeaks';
 import { connect } from 'react-redux';
-import ngoList from './ngoList/ngoList';
+import userlist from './userList/userList'
 import medicinelist from './medicinesList/medicinelist';
 import DonorSpeaks from './donor_speaks/DonorSpeaks';
 import ngoBeneficiary from './ngo_beneficiary/ngoBeneficiary';
@@ -23,6 +24,8 @@ import WTH from './waystohelp/wth'
 
 
 import "./main.css";
+import { ADD_MEDICINE } from '../redux/ActionTypes';
+import  addBeneficiary  from './forms/addngobeneficiay';
 
 const Main = (props)=>{
 
@@ -45,12 +48,15 @@ const Main = (props)=>{
         <Route path = '/Error' exact component={Error} /> 
         <Route path='/donorspeaks' exact component={DonorSpeaks} />  
         <Route path='/ngoBeneficiary' exact component={ngoBeneficiary} />
-        <Route path='/ngoList'  exactcomponent={ngoList} /> 
         <Route path='/medicinelist' exact component={medicinelist} /> 
+        <Route path='/userslist' exact component = {userlist} />
         <Route path='/addblog' exact component={addNgoBlog} />
         <Route path='/blog' exact component={blog} />      
         <Route path='/BlogArticle' exact component={BlogArticle} />
-        { props.role==="ngo" && <Route path='/addblog' exact component={Addblogs} />}
+        { props.role==="ngo" && <Route path='/addblog' exact component={Addblogs}/>}
+        { props.role==="ngo" && <Route path='/addbeneficiary' exact component={addBeneficiary}/>}
+        { props.role==="donor" && <Route path='/adddonorSpeak' exact component={addDonorSpeak} /> }
+        { props.role==="donor" && <Route path='/addmedicine' exact component={Addmedicines} /> }
         <Redirect to="/"/>
         </Switch>
     }

@@ -46,26 +46,29 @@ export const signupInit = (signupCred) => {
   };
 };
 
-// export const logout = () => {
-//   return (dispatch) => {
-//     const requestURL = '/users/logout';
-//     axios
-//       .get(requestURL)
-//       .then((res) => {
-//         console.log(res);
-//         localStorage.removeItem('Username');
-//         localStorage.removeItem('email');
-//         localStorage.removeItem('role');
-//         localStorage.removeItem('token');
-//         dispatch({
-//           type: actionTypes.LOGOUT_SUCCESS,
-//         });
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         dispatch({
-//           type: actionTypes.LOGOUT_FAILED,
-//         });
-//       });
-//   };
-// };
+export const logout = () => {
+  return (dispatch) => {
+    const requestURL = '/users/logout';
+    axios
+      .get(requestURL)
+      .then((res) => {
+        console.log(res);
+        localStorage.removeItem("name")
+        localStorage.removeItem("username")
+        localStorage.removeItem("token")
+        localStorage.removeItem("role")
+        localStorage.removeItem("contact")
+        localStorage.removeItem("address")
+        localStorage.removeItem("description")
+        dispatch({
+          type: actionTypes.LOGOUT_SUCCESS,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch({
+          type: actionTypes.LOGOUT_FAILED,
+        });
+      });
+  };
+};

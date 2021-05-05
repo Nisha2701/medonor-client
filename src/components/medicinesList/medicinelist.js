@@ -6,17 +6,20 @@ import Card from 'react-bootstrap/Card';
 import { Row, Col } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux' ; 
-import { fetchMedicines } from '../../redux/actions/medicines';
+import { fetchMedicines,deleteMedicine } from '../../redux/actions/medicines';
 
 const mapStateToProps = (state) => {
   return {
     medicines: state.medicines,
+    role:state.user.role,
+    token:state.user.token,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchMedicines: () => dispatch(fetchMedicines())
+    fetchMedicines: () => dispatch(fetchMedicines()),
+    deleteMedicine:()=>dispatch(deleteMedicine())
   }
 }
 
@@ -46,6 +49,16 @@ class medlist extends Component {
        <p><i className="cdd-text">Address: </i>{medicines.author.address}</p>
        </Card.Text>
        <Button variant="outline-primary"  className="btt-style">Contact now</Button>{' '}
+       {
+        this.props.role==='admin' || this.props.userId === medicines.author._id
+        ?
+    
+            <Button color='danger' onClick={() => deleteMedicine(medicines._id)}>
+            <span className='fa fa-lg fa-trash'></span></Button>
+    
+        :
+        <></>
+    }
        </Card.Body>
        </Card>
        </Col>  

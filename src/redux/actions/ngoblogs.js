@@ -48,7 +48,11 @@ export const postNgoBlog = (ngoblog) => (dispatch) => {
 export const fetchNgoBlogs = () => (dispatch) => {
   dispatch(ngoblogsLoading(true));
 
-  return fetch(baseUrl + 'ngoblogs')
+  return fetch(baseUrl + 'ngoblogs',{
+    headers:{
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+    }
+  })
     .then(
       (response) => {
         console.log('res!', response);

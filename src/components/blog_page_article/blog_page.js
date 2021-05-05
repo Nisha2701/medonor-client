@@ -35,7 +35,7 @@ class blog extends Component {
   }
   renderNgoBlogs = (ngoBlogs, key) => {
     return (
-      <Row className='article-card'>
+      <Row className='article-card' key={key}>
         <div>
           <Image src={img1} className='article-card-image' />
         </div>
@@ -97,9 +97,9 @@ class blog extends Component {
                 <span className='hr-line-content'>LATEST POSTS</span>
               </h2>
               <div classname='row'>
-                {this.props.ngoBlogs.ngoblogs.map((item, key) => {
-                  this.renderNgoBlogs(item, key);
-                })}
+                {this.props.ngoBlogs.ngoblogs.map((item, key) => 
+                  this.renderNgoBlogs(item, key),
+                )}
               </div>
             </Col>
 

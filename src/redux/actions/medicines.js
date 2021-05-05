@@ -2,22 +2,21 @@
 import * as ActionTypes from "../ActionTypes";
 import { baseUrl } from "../../shared/baseUrl";
 
-export const addMedicine = (medicine) => ({
-	type: ActionTypes.ADD_MEDICINE,
-	payload: medicine,
+export const addMedicines = (medicines) => ({
+	type: ActionTypes.ADD_MEDICINES,
+	payload: medicines,
 });
 
 export const postMedicine = (medicine) => (dispatch) => {
 	const newMedicine = medicine;
 	newMedicine.dateNum = Date.now();
-	const bearer = "Bearer " + localStorage.getItem("token");
 
 	return fetch(baseUrl + "medicines", {
 		method: "POST",
 		body: JSON.stringify(newMedicine),
 		headers: {
 			"Content-Type": "application/json",
-			Authorization: bearer,
+			Authorization: `Bearer ${localStorage.getItem('token')}`,
 		},
 		//credentials: "same-origin"
 	})
@@ -73,13 +72,12 @@ export const fetchMedicines = () => (dispatch) => {
 
 
 export const deleteMedicine = (medicineId) => (dispatch) => {
-	const bearer = "Bearer " + localStorage.getItem("token");
 
 	return fetch(baseUrl + "medicines/" + medicineId, {
 		method: "DELETE",
 		headers: {
 			"Content-Type": "application/json",
-			Authorization: bearer,
+			Authorization: `Bearer ${localStorage.getItem('token')}`,
 		},
         //credentials: "same-origin"
     })
@@ -115,7 +113,7 @@ export const medicinesFailed = (errmess) => ({
 	payload: errmess,
 });
 
-export const addMedicines = (medicines) => ({
-	type: ActionTypes.ADD_MEDICINES,
-	payload: medicines,
+export const addMedicine = (medicine) => ({
+	type: ActionTypes.ADD_MEDICINE,
+	payload: medicine,
 });
