@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import "./ngoBeneficiary.css";
+import './ngoBeneficiary.css';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { connect } from 'react-redux';
 import { fetchNgoBeneficiaries } from '../../redux/actions/ngobeneficiary';
-import { Row, Col } from "react-bootstrap";
+import { Row, Col } from 'react-bootstrap';
 
 const mapStateToProps = (state) => {
   return {
@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-class NgoBeneficiaries  extends Component {
+class NgoBeneficiaries extends Component {
   componentDidMount() {
     this.props.fetchNgoBeneficiaries();
   }
@@ -25,24 +25,23 @@ class NgoBeneficiaries  extends Component {
   renderNgoBeneficiaries = (ngobeneficiaries, key) => {
     return (
       <ListGroup>
-      <Col md={6}  key={key}>
-      <Row className="list-setting">
-            <ListGroup.Item className="list-style">
-                 <p>{ngobeneficiaries.description} </p>
-                 
-                 <i className="b-name" >{ngobeneficiaries.name}</i>
-                 <p className="b-name">{ngobeneficiaries.author.name}</p>
-                
-                 </ListGroup.Item>
-      </Row>
-      </Col>
+        <Col md={6} key={key}>
+          <Row className='list-setting'>
+            <ListGroup.Item className='list-style'>
+              <p>{ngobeneficiaries.description} </p>
+
+              <i className='b-name'>{ngobeneficiaries.name}</i>
+              <p className='b-name'>{ngobeneficiaries.author.name}</p>
+            </ListGroup.Item>
+          </Row>
+        </Col>
       </ListGroup>
     );
   };
   render() {
-    if(this.props.ngobeneficiaries.isLoading) {
+    if (this.props.ngobeneficiaries.isLoading) {
       return <h1>Loading</h1>;
-    } else if(this.props.ngobeneficiaries.errMess) {
+    } else if (this.props.ngobeneficiaries.errMess) {
       return <h1>{this.props.ngobeneficiaries.errMess}</h1>;
     }
     return (
