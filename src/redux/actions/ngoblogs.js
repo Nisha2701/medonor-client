@@ -48,10 +48,10 @@ export const postNgoBlog = (ngoblog) => (dispatch) => {
 export const fetchNgoBlogs = () => (dispatch) => {
   dispatch(ngoblogsLoading(true));
 
-  return fetch(baseUrl + 'ngoblogs',{
-    headers:{
+  return fetch(baseUrl + 'ngoblogs', {
+    headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
-    }
+    },
   })
     .then(
       (response) => {
@@ -76,14 +76,13 @@ export const fetchNgoBlogs = () => (dispatch) => {
     .catch((error) => dispatch(ngoblogsFailed(error.message)));
 };
 
-export const fetchNgoBlog = (ngoblogId) => (dispatch) => {
-  
-
-  return fetch(baseUrl + 'ngoblogs'+ngoblogId,{
-    method:'GET',
-    headers:{
+export const fetchNgoBlogById = (ngoblogId) => (dispatch) => {
+  console.log('id!', ngoblogId);
+  return fetch(baseUrl + 'ngoblogs' + ngoblogId, {
+    method: 'GET',
+    headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
-    }
+    },
   })
     .then(
       (response) => {
@@ -103,9 +102,11 @@ export const fetchNgoBlog = (ngoblogId) => (dispatch) => {
       }
     )
     .then((response) => response.json())
-    .then((response) => dispatch(fetchNgoblog(response)))
-    .then(()=>console.log('Ngoblog fetched!!'))
-    .catch((error)=>console.log(error))
+    .then((response) => {
+      dispatch(fetchNgoblog(response));
+    })
+    .then(() => console.log('Ngoblog fetched!!'))
+    .catch((error) => console.log(error));
 };
 
 export const deleteNgoBlog = (ngoblogId) => (dispatch) => {
@@ -157,7 +158,7 @@ export const addNgoBlog = (ngoblog) => ({
   payload: ngoblog,
 });
 
-export const fetchNgoBlog = (ngoblogId)=>({
-  type:ActionTypes.FETCHNGOBLOG,
-  payload: {...ngoblog,ngoblogId},
-})
+export const fetchNgoblog = (ngoblog) => ({
+  type: ActionTypes.FETCH_NGOBLOG,
+  payload: ngoblog,
+});

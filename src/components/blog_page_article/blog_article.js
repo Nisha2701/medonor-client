@@ -18,7 +18,7 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
-function BlogArticle() {
+function BlogArticle({ blog }) {
   return (
     <div className='blog-article'>
       <Jumbotron
