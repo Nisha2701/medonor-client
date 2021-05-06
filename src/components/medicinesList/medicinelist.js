@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchMedicines: () => dispatch(fetchMedicines()),
-    deleteMedicine: () => dispatch(deleteMedicine()),
+    deleteMedicine: (medicineId) => dispatch(deleteMedicine(medicineId)),
   };
 };
 
@@ -61,7 +61,7 @@ class medlist extends Component {
               this.props.userId === medicines.author._id ? (
                 <Button
                   color='danger'
-                  onClick={() => deleteMedicine(medicines._id)}
+                  onClick={() => this.props.deleteMedicine(medicines._id)}
                 >
                   <span className='fa fa-lg fa-trash'></span>
                 </Button>
