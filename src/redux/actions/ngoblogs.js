@@ -76,6 +76,38 @@ export const fetchNgoBlogs = () => (dispatch) => {
     .catch((error) => dispatch(ngoblogsFailed(error.message)));
 };
 
+export const fetchNgoBlog = (ngoblogId) => (dispatch) => {
+  
+
+  return fetch(baseUrl + 'ngoblogs'+ngoblogId,{
+    method:'GET',
+    headers:{
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
+    }
+  })
+    .then(
+      (response) => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error(
+            'Error ' + response.status + ': ' + response.statusText
+          );
+          error.response = response;
+          throw error;
+        }
+      },
+      (error) => {
+        var errmess = new Error(error.message);
+        throw errmess;
+      }
+    )
+    .then((response) => response.json())
+    .then((response) => dispatch(fetchNgoblog(response)))
+    .then(()=>console.log('Ngoblog fetched!!'))
+    .catch((error)=>console.log(error))
+};
+
 export const deleteNgoBlog = (ngoblogId) => (dispatch) => {
   return fetch(baseUrl + 'ngoblog/' + ngoblogId, {
     method: 'DELETE',
@@ -124,3 +156,8 @@ export const addNgoBlog = (ngoblog) => ({
   type: ActionTypes.ADD_NGOBLOG,
   payload: ngoblog,
 });
+
+export const fetchNgoBlog = (ngoblogId)=>({
+  type:ActionTypes.FETCHNGOBLOG,
+  payload: {...ngoblog,ngoblogId},
+})

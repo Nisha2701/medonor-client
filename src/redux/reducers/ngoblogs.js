@@ -23,10 +23,6 @@ export const NgoBlogs = (
       var ngoblog = action.payload;
       return { ...state, ngoblogs: state.ngoblogs.concat(ngoblog) };
 
-    case ActionTypes.FETCH_NGOBLOG:
-      var ngoblog = action.payload;
-      return { ...state, ngoblog };
-
     case ActionTypes.DELETE_NGOBLOG:
       var ngoblogId = action.payload;
       var index = state.ngoblogs.indexOf(
@@ -34,6 +30,12 @@ export const NgoBlogs = (
       );
       state.ngoblogs.splice(index, 1);
       return { ...state, ngoblogs: state.ngoblogs };
+    case ActionTypes.FETCH_NGOBLOG:
+      //  var ngoblogId = action.payload;
+      return {
+        ...state,
+        ngoblog: action.ngoblog,
+      };
 
     default:
       return state;
