@@ -28,7 +28,13 @@ export const NgoBlogs = (
 				var index = state.ngoblogs.indexOf(state.ngoblogs.filter(ngoblog => ngoblog._id === ngoblogId)[0]);
 				state.ngoblogs.splice(index, 1);
 				return {...state, ngoblogs: state.ngoblogs}
-	
+	    case ActionTypes.FETCH_NGOBLOG:
+			 //  var ngoblogId = action.payload;
+			   return {
+				   ...state,
+				   ngoblog:action.ngoblog
+			   }
+
 		default:
 			return state;
 	}
