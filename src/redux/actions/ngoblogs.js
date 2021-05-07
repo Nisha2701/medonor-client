@@ -77,8 +77,7 @@ export const fetchNgoBlogs = () => (dispatch) => {
 };
 
 export const fetchNgoBlogById = (ngoblogId) => (dispatch) => {
-  console.log('id!', ngoblogId);
-  return fetch(baseUrl + 'ngoblogs' + ngoblogId, {
+  return fetch(baseUrl + 'ngoblogs/' + ngoblogId, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${localStorage.getItem('token')}`,
