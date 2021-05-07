@@ -13,6 +13,7 @@ const mapStateToProps = (state) => {
     medicines: state.medicines,
     role: state.user.role,
     token: state.user.token,
+    userId: state.user._id,
   };
 };
 

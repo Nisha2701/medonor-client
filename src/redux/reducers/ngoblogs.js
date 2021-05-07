@@ -32,7 +32,6 @@ export const NgoBlogs = (
       return { ...state, ngoblogs: state.ngoblogs };
     case ActionTypes.FETCH_NGOBLOG:
       //  var ngoblogId = action.payload;
-      console.log('payload!', action.payload);
       return {
         ...state,
         ngoblog: action.payload,

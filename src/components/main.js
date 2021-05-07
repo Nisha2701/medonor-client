@@ -53,7 +53,7 @@ const Main = (props) => {
         <Route path='/userslist' exact component={userlist} />
         <Route path='/addblog' exact component={addNgoBlog} />
         <Route path='/blog' exact component={blog} />
-        <Route path='/:blogId' exact component={BlogArticle} />
+        <Route exact path='/blog/:blogId' exact component={BlogArticle} />
         <Route path='/BlogArticle' exact component={BlogArticle} />
         {props.role === 'ngo' && (
           <Route path='/addblog' exact component={Addblogs} />

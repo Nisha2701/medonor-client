@@ -6,7 +6,7 @@ import pic1 from './pic1.png';
 import pic2 from './pic2.png';
 import pic3 from './pic3.png';
 import { connect } from 'react-redux';
-import { fetchNgoBlogById, fetchNgoBlogs } from '../../redux/actions/ngoblogs';
+import { fetchNgoBlogs } from '../../redux/actions/ngoblogs';
 import {
   Image,
   Container,
@@ -27,11 +27,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchNgoBlogs: () => dispatch(fetchNgoBlogs()),
-    fetchNgoBlogById: (ngoblogId) => dispatch(fetchNgoBlogById(ngoblogId)),
   };
 };
 
-const Blog = ({ fetchNgoBlogs, ngoBlogs, fetchNgoBlogById }) => {
+const Blog = ({ fetchNgoBlogs, ngoBlogs }) => {
   const history = useHistory();
 
   useEffect(() => {
@@ -57,8 +56,7 @@ const Blog = ({ fetchNgoBlogs, ngoBlogs, fetchNgoBlogById }) => {
             </Card.Text>
             <Button
               onClick={() => {
-                fetchNgoBlogById(ngoBlogs._id);
-                history.push(`/${ngoBlogs._id}`);
+                history.push(`/blog/${ngoBlogs._id}`);
               }}
               variant='light'
               size='sm'
